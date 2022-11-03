@@ -1,4 +1,17 @@
-.container {
+.header {
+  position: relative;
+  background: linear-gradient(
+      to right top,
+      rgba(34, 37, 41, 1) 0%,
+      rgba(34, 37, 41, 1) 65%,
+      rgba(34, 37, 41, 0.75) 75%
+    ),
+    url('../public/code.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+/* .container {
   padding: 0 2rem;
 }
 
@@ -126,4 +139,4 @@
   .logo img {
     filter: invert(1);
   }
-}
+} */

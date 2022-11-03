@@ -1,26 +1,228 @@
-html,
-body {
-  padding: 0;
+/* FONTS  */
+@font-face {
+  font-family: 'Miso';
+  src: url(../fonts/Miso\ Bold.otf);
+  font-style: normal;
+  font-weight: 700;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url(../fonts/Quicksand-Regular.otf);
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url(../fonts/Quicksand-Bold.otf);
+  font-style: normal;
+  font-weight: 700;
+  font-display: auto;
+}
+
+/* ROOT  */
+:root {
+  --x: 0;
+  --y: 0;
+  --z: 0;
+}
+
+/* GENERAL  */
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
+  padding: 0;
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+}
+
+[class*='grid-'] {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-center {
+  place-items: center;
+}
+
+[class*='flex-'] {
+  display: flex;
+  gap: var(--gap-space, 1rem);
+}
+
+.flex-lg-container {
+  width: 100%;
+  max-width: 90rem;
+  padding: 8rem 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .logo {
+  width: clamp(3rem, 50vw, 10rem);
+  margin: 3em 0 0 1.5em;
+  color: #fff;
+  display: flex;
+} */
+
+/* .flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem;
+  gap: 4rem;
+
+} */
+
+.content {
+  flex: 1;
+  /* border: 1px solid red; */
+}
+
+img {
+  /* width: 100%;
+  height: auto; */
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* TITLE ANIMATION START  */
+.title {
+  position: relative;
+  margin-bottom: 1rem;
+  font-family: 'Miso', sans-serif;
+  font-size: clamp(4.5rem, 1rem + 8vw, 9rem);
+  font-weight: 700;
+  line-height: 0.95;
+  color: #fff;
+  cursor: pointer;
+}
+
+.title__accent {
+  color: #0fc5b0;
+}
+
+.clip-path {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  color: #c59940;
+  clip-path: circle(var(--z) at var(--x, 50%) var(--y, 50%));
+  transition: all 0.05s ease-in-out;
+}
+
+.title:hover .clip-path {
+  --z: 7rem;
+}
+
+/* TITLE ANIMATION END  */
+
+.description {
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.8);
+  /* cursor: pointer; */
+}
+
+.description span {
+  color: #0fc5b0;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.description span:hover {
+  color: #c59940;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+p {
+  font-weight: 400;
+  line-height: 22px;
+  font-size: 0.9rem;
+  /* font-size: 1rem; */
+  max-width: 46ch;
+}
+
+/* SKILLS  */
+
+.skills {
+  width: min(100%, 36em);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  grid-template-areas:
+    '. prvi prvi prvi prvi .'
+    'drugi drugi drugi treci treci treci'
+    '. cetvrti cetvrti cetvrti cetvrti .';
+  /* border: 1px solid red; */
+}
+
+.skill {
+  padding: 1em;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  background: #272a2e;
+  border-radius: 1em;
+  box-shadow: 0 0.25em 1em rgb(0 0 0 / 35%);
+  /* cursor: pointer; */
+  /* transition: scale 0.15s ease; */
+}
+
+.skill i {
+  margin-right: 0.3rem;
+}
+
+.skill:nth-child(1) {
+  grid-area: prvi;
+}
+.skill:nth-child(1) h4 {
+  color: #0085c7;
+  color: #3092c4;
+}
+
+.skill:nth-child(2) {
+  grid-area: drugi;
+}
+.skill:nth-child(2) h4 {
+  color: #ff5757;
+  color: #d15757;
+}
+
+.skill:nth-child(3) {
+  grid-area: treci;
+}
+.skill:nth-child(3) h4 {
+  color: #0fc5b0;
+}
+.skill:nth-child(4) {
+  grid-area: cetvrti;
+}
+.skill:nth-child(4) h4 {
+  color: #c78500;
+  color: #c59940;
+}
+
+.dummy-space {
+  height: 1000px;
 }
