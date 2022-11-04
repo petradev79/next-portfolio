@@ -7,7 +7,7 @@
       rgba(34, 37, 41, 1) 65%,
       rgba(34, 37, 41, 0.75) 75%
     ),
-    url('../public/code.jpg');
+    url('../assets/code.jpg');
   background-position: center;
   background-size: cover;
 }
