@@ -1,21 +1,16 @@
 import Meta from '../../components/Meta';
-import Header from '../../components/Header';
-import { HeaderPropsInterface } from '../../types';
-
-const headerProps: HeaderPropsInterface = {
-  title: {
-    title: ['Lorem ipsum dolor sit amet.'],
-    description: [
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, vel earum! Ducimus expedita, maiores odit vero ullam itaque molestiae doloremque numquam, ab voluptatum quos ipsam mollitia quas quis aperiam rerum?',
-    ],
-  },
-};
+import Introduction from '../../components/Introduction';
 
 const About = () => {
   return (
     <>
       <Meta title='Ivan Petrovic | About' />
-      <Header title={headerProps.title} />
+      <Introduction
+        main={['Ivan Petrovic | About']}
+        description={[
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur veniam sapiente fugiat tempore ad officia doloremque qui, sequi pariatur fuga quisquam voluptate quae doloribus quaerat consectetur tempora distinctio fugit numquam.',
+        ]}
+      />
     </>
   );
 };

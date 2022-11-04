@@ -1,14 +1,11 @@
-import Navbar from '../Navbar';
+import Header from '../Header';
 import Meta from '../Meta';
 
-interface LayoutInterface {
-  children: JSX.Element;
-}
-
-const Layout = ({ children }: LayoutInterface) => {
+const Layout: React.FC<{ children: JSX.Element }> = ({ children }) => {
   return (
     <>
       <Meta />
+      <Header />
       <main>{children}</main>
     </>
   );

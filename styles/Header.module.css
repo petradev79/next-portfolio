@@ -1,122 +1,16 @@
 .header {
-  position: relative;
-  background: linear-gradient(
-      to right top,
-      rgba(34, 37, 41, 1) 0%,
-      rgba(34, 37, 41, 1) 65%,
-      rgba(34, 37, 41, 0.75) 75%
-    ),
-    url('../public/code.jpg');
-  background-position: center;
-  background-size: cover;
+  border: 1px solid red;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
 }
 
-.container-header {
+.header-container {
   max-width: 90rem;
-  padding-block: 8rem;
+  padding: 1rem 2rem;
 
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-/* HEADER TITLE */
-.title {
-  flex: 1;
-}
-
-.title h1 {
-  position: relative;
-  margin-bottom: 1rem;
-  cursor: pointer;
-}
-
-.title h1 span {
-  color: rgb(var(--color-primary));
-}
-
-.title .clip-path {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: transparent;
-  color: rgb(var(--color-accent));
-  clip-path: circle(var(--z) at var(--x, 50%) var(--y, 50%));
-  transition: all 0.05s ease-in-out;
-}
-
-.title h1:hover .clip-path {
-  --zAxis: 7rem;
-}
-
-.title p {
-  max-width: 46ch;
-  font-size: 1.25rem;
-  color: rgba(var(--color-white), 0.8);
-}
-
-.title p span {
-  color: rgb(var(--color-primary));
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-.title p span:hover {
-  color: rgb(var(--color-accent));
-}
-
-/* SKILLS  */
-.grid-skills {
-  width: min(100%, 36em);
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-areas:
-    '. skill_1 skill_1 skill_1 skill_1 .'
-    'skill_2 skill_2 skill_2 skill_3 skill_3 skill_3'
-    '. skill_4 skill_4 skill_4 skill_4 .';
-}
-
-.flex-skill {
-  padding: 1em;
-  align-items: flex-start;
-  flex-direction: column;
-  --gap-space: 0.5rem;
-  color: rgba(var(--color-white), 0.8);
-  background: rgb(var(--color-grey-dark));
-  border-radius: 1em;
-  box-shadow: 0 0.25em 1em rgba(var(--color-black), 0.35);
-}
-
-.flex-skill svg {
-  margin-right: 0.3rem;
-}
-
-.flex-skill:nth-child(1) {
-  grid-area: skill_1;
-}
-.flex-skill:nth-child(2) {
-  grid-area: skill_2;
-}
-.flex-skill:nth-child(3) {
-  grid-area: skill_3;
-}
-.flex-skill:nth-child(4) {
-  grid-area: skill_4;
-}
-
-.flex-skill:nth-child(1) h4 {
-  color: rgb(var(--color-success));
-}
-
-.flex-skill:nth-child(2) h4 {
-  color: rgb(var(--color-warning));
-}
-
-.flex-skill:nth-child(3) h4 {
-  color: rgb(var(--color-primary));
-}
-
-.flex-skill:nth-child(4) h4 {
-  color: rgb(var(--color-accent));
+  gap: 3rem;
+  border: 1px solid red;
 }

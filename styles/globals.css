@@ -95,7 +95,7 @@ p {
   gap: var(--gap-space, 1rem);
 }
 
-[class*='container-'] {
+[class*='-container'] {
   width: 100%;
   margin: 0 auto;
   padding: 0 2rem;
@@ -114,16 +114,3 @@ p {
   align-items: center;
   justify-content: space-between;
 } */
-
-.container-main {
-  max-width: 80rem;
-}
-
-.container-nav {
-  max-width: 90rem;
-  padding: 1rem 2rem;
-
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-}

@@ -1,27 +1,27 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import styles from '../../styles/Header.module.css';
-import Title from './Title';
-import Skill from './Skill';
-import { HeaderPropsInterface } from '../../types';
-import Navbar from '../Navbar';
 
-const Header = ({ title, skills }: HeaderPropsInterface) => {
+const Header = () => {
   return (
-    <header className={styles.header}>
-      <Navbar />
-      <div className={styles['container-header']}>
-        <Title title={title.title} description={title.description} />
-        <div className={styles['grid-skills']}>
-          {skills?.map((skill, i) => (
-            <Skill
-              icon={skill.icon}
-              title={skill.title}
-              description={skill.description}
-              key={i}
-            />
-          ))}
+    <nav className={styles.header}>
+      <div className={styles['header-container']}>
+        <div className='logo'>
+          <Image
+            src='/logo.svg'
+            width={104.8}
+            height={63.4}
+            priority={false}
+            alt='Logo'
+          />
+        </div>
+        <div className='flex-menu'>
+          <Link href='/'>Home</Link>
+          <Link href='/about'>About</Link>
         </div>
       </div>
-    </header>
+    </nav>
   );
 };
+
 export default Header;

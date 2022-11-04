@@ -1,11 +1,11 @@
-import styles from '../../styles/Header.module.css';
-import { TitleInterface } from '../../types';
+import styles from '../../styles/Introduction.module.css';
+import { TitleProps } from '../../types';
 
-const Title = ({ title, description }: TitleInterface) => {
+const Title: React.FC<TitleProps> = ({ main, description }) => {
   return (
     <div className={styles.title}>
       <h1>
-        {title}
+        {main}
         {/* <div className={styles['clip-path']}>{title}</div> */}
       </h1>
       <p>{description}</p>
