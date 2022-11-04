@@ -14,7 +14,7 @@
 
 .introduction-container {
   max-width: 90rem;
-  padding-block: 12rem 8rem;
+  padding-block: 15rem 10rem;
 
   display: flex;
   align-items: center;
@@ -45,11 +45,14 @@
   background: transparent;
   color: rgb(var(--color-accent));
   clip-path: circle(var(--z) at var(--x, 50%) var(--y, 50%));
-  transition: all 0.05s ease-in-out;
+}
+
+.title .clip-path span {
+  color: rgb(var(--color-accent));
 }
 
 .title h1:hover .clip-path {
-  --zAxis: 7rem;
+  --z: 7rem;
 }
 
 .title p {

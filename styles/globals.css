@@ -41,9 +41,9 @@
   --color-white: 255, 255, 255;
 
   /* COORDINATES  */
-  --xAxis: 0;
-  --yAxis: 0;
-  --zAxis: 0;
+  --x: 0;
+  --y: 0;
+  --z: 0;
 }
 
 /* GENERAL  */
