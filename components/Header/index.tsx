@@ -14,6 +14,7 @@ const Header = () => {
             priority={false}
             alt='Logo'
           />
+          <p>tips</p>
         </div>
         <div className='flex-menu'>
           <Link href='/'>Home</Link>

@@ -6,34 +6,35 @@ import {
   FaGraduationCap,
 } from 'react-icons/fa';
 
-const Skills = () => {
+const Tips = () => {
   return (
-    <div className={styles['grid-skills']}>
-      <div className={styles['flex-skill']}>
+    <div className={styles['grid-tips']}>
+      <div className={styles['flex-tip']}>
         <h4>
           <FaCode />
-          Dynamic Content
+          Strategic Planning
         </h4>
         <p>
-          Being a person always willing to learn new skills and techniques I
-          enjoy being challenged.
+          Before start coding define your vision and plan project structure and
+          architecture.
         </p>
       </div>
-      <div className={styles['flex-skill']}>
+      <div className={styles['flex-tip']}>
         <h4>
           <FaCodeBranch />
           Work in a Team
         </h4>
-        <p>Collaboration skills can help a team to achieve a common goal.</p>
+        {/* <p>Collaboration skills can help a team to achieve a common goal.</p> */}
+        <p>Teamwork and collaboration are good for business.</p>
       </div>
-      <div className={styles['flex-skill']}>
+      <div className={styles['flex-tip']}>
         <h4>
           <FaHatWizard />
           Beautiful Design
         </h4>
         <p>Creating beautiful and consistent UI leads to a better UX.</p>
       </div>
-      <div className={styles['flex-skill']}>
+      <div className={styles['flex-tip']}>
         <h4>
           <FaGraduationCap />
           Improving Knowledge
@@ -47,4 +48,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default Tips;

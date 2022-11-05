@@ -4,19 +4,18 @@ import { TitleProps } from '../../types';
 
 const Title: React.FC<TitleProps> = ({ main, description }) => {
   useEffect(() => {
-    const style = document.documentElement.style;
-    const clipPath = document.getElementById('clipPath');
-
-    const editCursor = (e: any) => {
-      const { clientX: x, clientY: y } = e;
-      const { x: clipX, y: clipY } = clipPath!.getBoundingClientRect();
-
-      style.setProperty('--x', x - clipX + 'px');
-      style.setProperty('--y', y - clipY + 'px');
-    };
-
     window.addEventListener('mousemove', editCursor);
   }, []);
+
+  const editCursor = (e: any) => {
+    const style = document.documentElement.style;
+    const clipPath = document.getElementById('clipPath');
+    const { clientX: x, clientY: y } = e;
+    const { x: clipX, y: clipY } = clipPath!.getBoundingClientRect();
+
+    style.setProperty('--x', x - clipX + 'px');
+    style.setProperty('--y', y - clipY + 'px');
+  };
 
   return (
     <div className={styles.title}>

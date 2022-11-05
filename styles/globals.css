@@ -35,7 +35,8 @@
   /* --color-shadow: rgba(0, 0, 0, 0.3); */
   /* --color-hover: 240, 240, 240; */
 
-  --color-grey-dark: 39, 42, 46;
+  --color-dark-one: 34, 37, 41;
+  --color-dark-two: 39, 42, 46;
 
   --color-black: 0, 0, 0;
   --color-white: 255, 255, 255;
@@ -58,6 +59,7 @@
 body {
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
+  background-color: rgb(var(--color-dark-two));
 }
 
 img {
@@ -74,14 +76,23 @@ h1 {
   color: rgb(var(--color-white));
 }
 
+h2 {
+  font-family: 'Miso', sans-serif;
+  font-size: clamp(3rem, 1rem + 5vw, 5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  color: rgb(var(--color-white));
+}
+
 h4 {
   font-weight: 700;
   font-size: 1rem;
 }
 
 p {
-  font-size: 0.9rem;
+  font-size: 1.25rem;
   line-height: 1.5;
+  color: rgb(var(--color-white), 0.8);
 }
 
 /* LAYOUT  */
@@ -114,3 +125,23 @@ p {
   align-items: center;
   justify-content: space-between;
 } */
+
+.section {
+  padding-block: 8rem 0;
+}
+
+.section-container {
+  max-width: 55rem;
+}
+
+.section h2 {
+  margin-bottom: 1rem;
+}
+
+.section h2 span {
+  color: rgb(var(--color-primary));
+}
+
+.section p span {
+  color: rgb(var(--color-accent));
+}

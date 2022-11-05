@@ -3,9 +3,9 @@
   position: relative;
   background: linear-gradient(
       to right top,
-      rgba(34, 37, 41, 1) 0%,
-      rgba(34, 37, 41, 1) 65%,
-      rgba(34, 37, 41, 0.75) 75%
+      rgba(var(--color-dark-one), 1) 0%,
+      rgba(var(--color-dark-one), 1) 65%,
+      rgba(var(--color-dark-one), 0.75) 75%
     ),
     url('../assets/code.jpg');
   background-position: center;
@@ -18,7 +18,8 @@
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 /* TITLE */
@@ -57,8 +58,6 @@
 
 .title p {
   max-width: 46ch;
-  font-size: 1.25rem;
-  color: rgba(var(--color-white), 0.8);
 }
 
 .title p span {
@@ -71,56 +70,61 @@
   color: rgb(var(--color-accent));
 }
 
-/* SKILLS  */
-.grid-skills {
+/* TIPS  */
+.grid-tips {
   width: min(100%, 36em);
   grid-template-columns: repeat(6, 1fr);
   grid-template-areas:
-    '. skill_1 skill_1 skill_1 skill_1 .'
-    'skill_2 skill_2 skill_2 skill_3 skill_3 skill_3'
-    '. skill_4 skill_4 skill_4 skill_4 .';
+    '. tip_1 tip_1 tip_1 tip_1 .'
+    'tip_2 tip_2 tip_2 tip_3 tip_3 tip_3'
+    '. tip_4 tip_4 tip_4 tip_4 .';
 }
 
-.flex-skill {
+.flex-tip {
   padding: 1em;
   align-items: flex-start;
   flex-direction: column;
   --gap-space: 0.5rem;
-  color: rgba(var(--color-white), 0.8);
-  background: rgb(var(--color-grey-dark));
+  background: rgb(var(--color-dark-two));
   border-radius: 1em;
   box-shadow: 0 0.25em 1em rgba(var(--color-black), 0.35);
 }
 
-.flex-skill svg {
-  margin-right: 0.3rem;
+.flex-tip h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
-.flex-skill:nth-child(1) {
-  grid-area: skill_1;
-}
-.flex-skill:nth-child(2) {
-  grid-area: skill_2;
-}
-.flex-skill:nth-child(3) {
-  grid-area: skill_3;
-}
-.flex-skill:nth-child(4) {
-  grid-area: skill_4;
+.flex-tip p {
+  font-size: 0.9rem;
 }
 
-.flex-skill:nth-child(1) h4 {
+.flex-tip:nth-child(1) {
+  grid-area: tip_1;
+}
+.flex-tip:nth-child(2) {
+  grid-area: tip_2;
+}
+.flex-tip:nth-child(3) {
+  grid-area: tip_3;
+}
+.flex-tip:nth-child(4) {
+  grid-area: tip_4;
+}
+
+.flex-tip:nth-child(1) h4 {
   color: rgb(var(--color-success));
 }
 
-.flex-skill:nth-child(2) h4 {
+.flex-tip:nth-child(2) h4 {
   color: rgb(var(--color-warning));
 }
 
-.flex-skill:nth-child(3) h4 {
+.flex-tip:nth-child(3) h4 {
   color: rgb(var(--color-primary));
 }
 
-.flex-skill:nth-child(4) h4 {
+.flex-tip:nth-child(4) h4 {
   color: rgb(var(--color-accent));
 }
