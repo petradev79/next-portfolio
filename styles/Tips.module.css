@@ -1,0 +1,49 @@
+.tips {
+  padding: 8rem 0;
+  background-color: rgb(var(--color-dark-two));
+}
+
+.tips-container {
+  max-width: 55rem;
+}
+
+.grid-tips {
+  --gap-space: 3rem;
+}
+
+.tip h2 {
+  margin-bottom: 1rem;
+}
+
+.tip h2 span {
+  color: rgb(var(--color-primary));
+}
+
+.tip p {
+  margin-bottom: 1rem;
+}
+
+.tip ul {
+  margin-left: 1em;
+}
+
+.tip ul li {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: rgb(var(--color-white), 0.8);
+}
+
+.tip p span,
+.tip ul li span {
+  font-weight: 700;
+  color: rgb(var(--color-white));
+}
+
+.tip ul li::before {
+  content: '•';
+  color: rgb(var(--color-primary));
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}

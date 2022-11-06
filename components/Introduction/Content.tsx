@@ -12,32 +12,28 @@ const Tips = () => {
       <div className={styles['flex-tip']}>
         <h4>
           <FaCode />
-          Strategic Planning
+          Define your vision
         </h4>
-        <p>
-          Before start coding define your vision and plan project structure and
-          architecture.
-        </p>
+        <p>A good start is half the battle, said someone wiser than me.</p>
       </div>
       <div className={styles['flex-tip']}>
         <h4>
           <FaCodeBranch />
-          Work in a Team
+          Teamwork and collaboration
         </h4>
-        {/* <p>Collaboration skills can help a team to achieve a common goal.</p> */}
-        <p>Teamwork and collaboration are good for business.</p>
+        <p>Teamwork makes the dream work, secret for better results.</p>
       </div>
       <div className={styles['flex-tip']}>
         <h4>
           <FaHatWizard />
-          Beautiful Design
+          User experience
         </h4>
-        <p>Creating beautiful and consistent UI leads to a better UX.</p>
+        <p>Web applications are all about user interaction.</p>
       </div>
       <div className={styles['flex-tip']}>
         <h4>
           <FaGraduationCap />
-          Improving Knowledge
+          Improving knowledge
         </h4>
         <p>
           Being a person always willing to learn new skills and techniques I

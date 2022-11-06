@@ -59,7 +59,6 @@
 body {
   font-family: 'Quicksand', sans-serif;
   font-weight: 400;
-  background-color: rgb(var(--color-dark-two));
 }
 
 img {
@@ -95,6 +94,10 @@ p {
   color: rgb(var(--color-white), 0.8);
 }
 
+ul {
+  list-style: none;
+}
+
 /* LAYOUT  */
 [class*='grid-'] {
   display: grid;
@@ -125,23 +128,3 @@ p {
   align-items: center;
   justify-content: space-between;
 } */
-
-.section {
-  padding-block: 8rem 0;
-}
-
-.section-container {
-  max-width: 55rem;
-}
-
-.section h2 {
-  margin-bottom: 1rem;
-}
-
-.section h2 span {
-  color: rgb(var(--color-primary));
-}
-
-.section p span {
-  color: rgb(var(--color-accent));
-}

@@ -1,4 +1,5 @@
 import Introduction from '../components/Introduction';
+import Tips from '../components/Tips';
 
 const Home = () => {
   return (
@@ -12,80 +13,10 @@ const Home = () => {
         description={[
           'My name is Ivan Petrovic, currently working at ',
           <span key='description'>Ingsoftware</span>,
-          ". I'm a software developer (and occasionally designer) specializing in building exceptional frontend user experiences.",
+          ". I'm a software developer (and occasionally designer) specializing in building exceptional frontend user experiences and I will share with you some of my thoughts and tips.",
         ]}
       />
-      <section className='section'>
-        <div className='section-container'>
-          <h2>
-            Before start coding{' '}
-            <span>define your vision and start planing</span>
-          </h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate,
-            provident, aut labore, nemo libero asperiores adipisci dicta
-            doloremque sequi culpa sed. Corrupti sit, quis autem porro aut
-            similique cupiditate ab. Sit repellendus et maiores facere
-            recusandae quas excepturi fugiat est vitae error, minima sequi modi
-            iusto harum quaerat laborum maxime!
-          </p>
-        </div>
-      </section>
-      <section className='section'>
-        <div className='section-container'>
-          <h2>
-            It's no secret that <span>teamwork and collaboration skills</span>{' '}
-            are good for business
-          </h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate,
-            provident, aut labore, nemo libero asperiores adipisci dicta
-            doloremque sequi culpa sed. Corrupti sit, quis autem porro aut
-            similique cupiditate ab. Sit repellendus et maiores facere
-            recusandae quas excepturi fugiat est vitae error, minima sequi modi
-            iusto harum quaerat laborum maxime!
-          </p>
-        </div>
-      </section>
-      <section className='section'>
-        <div className='section-container'>
-          <h2>Before start coding define your vision and start planing</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate,
-            provident, aut labore, nemo libero asperiores adipisci dicta
-            doloremque sequi culpa sed. Corrupti sit, quis autem porro aut
-            similique cupiditate ab. Sit repellendus et maiores facere
-            recusandae quas excepturi fugiat est vitae error, minima sequi modi
-            iusto harum quaerat laborum maxime!
-          </p>
-        </div>
-      </section>
-      <section className='section'>
-        <div className='section-container'>
-          <h2>Before start coding define your vision and start planing</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate,
-            provident, aut labore, nemo libero asperiores adipisci dicta
-            doloremque sequi culpa sed. Corrupti sit, quis autem porro aut
-            similique cupiditate ab. Sit repellendus et maiores facere
-            recusandae quas excepturi fugiat est vitae error, minima sequi modi
-            iusto harum quaerat laborum maxime!
-          </p>
-        </div>
-      </section>
-      <section className='section'>
-        <div className='section-container'>
-          <h2>Before start coding define your vision and start planing</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate,
-            provident, aut labore, nemo libero asperiores adipisci dicta
-            doloremque sequi culpa sed. Corrupti sit, quis autem porro aut
-            similique cupiditate ab. Sit repellendus et maiores facere
-            recusandae quas excepturi fugiat est vitae error, minima sequi modi
-            iusto harum quaerat laborum maxime!
-          </p>
-        </div>
-      </section>
+      <Tips />
     </>
   );
 };
