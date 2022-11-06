@@ -93,10 +93,9 @@ const Tips = () => {
               existence
             </h2>
             <p>
-              As said by Leonardo Da Vinci,{' '}
               <span>
-                “Learning is the only thing the mind never exhausts, never
-                fears, and never regrets”
+                Learning is the only thing the mind never exhausts, never fears,
+                and never regrets
               </span>
               . Being a person always willing to learn new skills and techniques
               I enjoy being challenged.
