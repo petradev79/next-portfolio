@@ -13,7 +13,7 @@
 }
 
 .introduction-container {
-  max-width: 90rem;
+  max-width: calc(90rem + var(--container-padding-inline));
   padding-block: 15rem 10rem;
 
   display: flex;

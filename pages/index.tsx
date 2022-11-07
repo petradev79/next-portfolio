@@ -14,7 +14,7 @@ const Home = () => {
         description={[
           'My name is Ivan Petrovic, currently working at ',
           <span key='description'>Ingsoftware</span>,
-          ". I'm a software developer (and occasionally designer) specializing in building frontend user experiences and this are my 4 tips.",
+          ". I'm a software developer (and occasionally designer) specializing in building frontend user experiences.",
         ]}
       />
       <About />

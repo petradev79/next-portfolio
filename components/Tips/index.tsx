@@ -6,10 +6,10 @@ const Tips = () => {
       <div className={styles['tips-container']}>
         <div className={styles['grid-tips']}>
           <div className={styles.tip}>
-            <h2>
+            <h3>
               Before start coding{' '}
               <span>define your vision and start planning</span>
-            </h2>
+            </h3>
             <p>
               A good start is half the battle, said someone wiser than me. And I
               can't think of any quote that would better describe the situation
@@ -37,10 +37,10 @@ const Tips = () => {
             </ul>
           </div>
           <div className={styles.tip}>
-            <h2>
+            <h3>
               It's no secret that <span>teamwork and collaboration skills</span>{' '}
               are good for business
-            </h2>
+            </h3>
             <p>
               Collaboration is key for{' '}
               <span>
@@ -60,10 +60,10 @@ const Tips = () => {
             </p>
           </div>
           <div className={styles.tip}>
-            <h2>
+            <h3>
               Someone wiser than me said{' '}
               <span>people ignore design that ignores people</span>
-            </h2>
+            </h3>
             <p>
               Web applications are all about user interaction, so having a
               clean, visually pleasing interface that supports an intuitive user
@@ -88,10 +88,10 @@ const Tips = () => {
             </ul>
           </div>
           <div className={styles.tip}>
-            <h2>
+            <h3>
               <span>Learning and improving knowledge</span> is essential to our
               existence
-            </h2>
+            </h3>
             <p>
               <span>
                 Learning is the only thing the mind never exhausts, never fears,

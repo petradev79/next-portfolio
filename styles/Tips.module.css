@@ -4,18 +4,18 @@
 }
 
 .tips-container {
-  max-width: 55rem;
+  max-width: calc(55rem + var(--container-padding-inline));
 }
 
 .grid-tips {
-  --gap-space: 3rem;
+  --gap-space: 5rem;
 }
 
-.tip h2 {
-  margin-bottom: 1rem;
+.tip h3 {
+  margin-bottom: 2rem;
 }
 
-.tip h2 span {
+.tip h3 span {
   color: rgb(var(--color-accent));
 }
 
