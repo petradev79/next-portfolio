@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import styles from '../../styles/Introduction.module.css';
-import { TitleProps } from '../../types';
+import { TitleInterface } from '../../types';
 
-const Title: React.FC<TitleProps> = ({ main, description }) => {
+const Title: React.FC<TitleInterface> = ({ main, description }) => {
   useEffect(() => {
     window.addEventListener('mousemove', editCursor);
   }, []);

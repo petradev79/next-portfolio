@@ -1,14 +1,17 @@
+import Image from 'next/image';
 import styles from '../../styles/Introduction.module.css';
 import Title from './Title';
+import { TitleInterface } from '../../types';
+import shapes from '../../assets/shapes.svg';
 import Content from './Content';
-import { TitleProps } from '../../types';
 
-const Introduction: React.FC<TitleProps> = ({ main, description }) => {
+const Introduction: React.FC<TitleInterface> = ({ main, description }) => {
   return (
     <section className={styles.introduction}>
       <div className={styles['introduction-container']}>
         <Title main={main} description={description} />
-        <Content />
+        <Image src={shapes} width={500} alt='portfolio' />
+        {/* <Content /> */}
       </div>
     </section>
   );

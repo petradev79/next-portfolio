@@ -1,10 +1,5 @@
 import Head from 'next/head';
-
-interface MetaInterface {
-  title?: string;
-  keywords?: string;
-  description?: string;
-}
+import { MetaInterface } from '../../types';
 
 const Meta: React.FC<MetaInterface> = ({ title, keywords, description }) => {
   return (

@@ -1,10 +1,10 @@
-import styles from '../../styles/Tips.module.css';
 import {
   FaCode,
   FaCodeBranch,
   FaHatWizard,
   FaGraduationCap,
 } from 'react-icons/fa';
+import styles from '../../styles/Tips.module.css';
 
 const Cards = () => {
   return (

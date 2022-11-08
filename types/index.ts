@@ -1,9 +1,9 @@
-export interface TitleProps {
+export interface MetaInterface {
+  title?: string;
+  keywords?: string;
+  description?: string;
+}
+export interface TitleInterface {
   main: (string | JSX.Element)[];
   description: (string | JSX.Element)[];
-}
-
-export interface TipProps {
-  title: (string | JSX.Element)[];
-  description: (string | JSX.Element)[][];
 }
