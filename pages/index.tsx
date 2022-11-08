@@ -1,6 +1,5 @@
 import Introduction from '../components/Introduction';
 import Tips from '../components/Tips';
-import About from '../components/About';
 
 const Home = () => {
   return (
@@ -17,7 +16,6 @@ const Home = () => {
           ". I'm a software developer (and occasionally designer) specializing in building frontend user experiences.",
         ]}
       />
-      <About />
       <Tips />
     </>
   );

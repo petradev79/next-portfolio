@@ -84,7 +84,7 @@
   padding: 1em;
   align-items: flex-start;
   flex-direction: column;
-  --gap-space: 0.5rem;
+  --flex-gap-space: 0.5rem;
   background: rgb(var(--color-dark-two));
   border-radius: 1em;
   box-shadow: 0 0.25em 1em rgba(var(--color-black), 0.35);

@@ -1,6 +1,21 @@
 .tips {
   padding: 8rem 0;
-  background-color: rgb(var(--color-dark-two));
+  background: rgb(var(--color-dark-two));
+}
+
+.intro-container {
+  max-width: calc(80rem + var(--container-padding-inline));
+}
+
+.flex-intro {
+  margin-bottom: 8rem;
+  align-items: center;
+  justify-content: space-between;
+  --flex-gap-space: 3rem;
+}
+
+.title {
+  flex: 1;
 }
 
 .tips-container {
@@ -8,17 +23,23 @@
 }
 
 .grid-tips {
-  --gap-space: 5rem;
+  --grid-gap-space: 5rem;
 }
 
+.title h2,
 .tip h3 {
   margin-bottom: 2rem;
+}
+
+.title h2 span {
+  color: rgb(var(--color-primary));
 }
 
 .tip h3 span {
   color: rgb(var(--color-accent));
 }
 
+.title p,
 .tip p {
   margin-bottom: 1rem;
 }
@@ -34,6 +55,7 @@
   color: rgb(var(--color-white), 0.8);
 }
 
+.title p span,
 .tip p span,
 .tip ul li span {
   font-weight: 700;
@@ -42,8 +64,68 @@
 
 .tip ul li::before {
   content: '•';
-  color: rgb(var(--color-success));
   display: inline-block;
   width: 1em;
   margin-left: -1em;
+  color: rgb(var(--color-success));
+}
+
+/* CARDS  */
+.grid-cards {
+  width: min(100%, 36em);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    '. card_1 card_1 card_1 card_1 .'
+    'card_2 card_2 card_2 card_3 card_3 card_3'
+    '. card_4 card_4 card_4 card_4 .';
+}
+
+.flex-card {
+  padding: 1em;
+  align-items: flex-start;
+  flex-direction: column;
+  --flex-gap-space: 0.5rem;
+  background: rgb(var(--color-dark-two));
+
+  border-radius: 1em;
+  box-shadow: 0 0.25em 1em rgba(var(--color-black), 0.35);
+}
+
+.flex-card h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.flex-card p {
+  font-size: 0.9rem;
+}
+
+.flex-card:nth-child(1) {
+  grid-area: card_1;
+}
+.flex-card:nth-child(2) {
+  grid-area: card_2;
+}
+.flex-card:nth-child(3) {
+  grid-area: card_3;
+}
+.flex-card:nth-child(4) {
+  grid-area: card_4;
+}
+
+.flex-card:nth-child(1) h4 {
+  color: rgb(var(--color-success));
+}
+
+.flex-card:nth-child(2) h4 {
+  color: rgb(var(--color-warning));
+}
+
+.flex-card:nth-child(3) h4 {
+  color: rgb(var(--color-primary));
+}
+
+.flex-card:nth-child(4) h4 {
+  color: rgb(var(--color-accent));
 }

@@ -1,8 +1,16 @@
 import styles from '../../styles/Tips.module.css';
+import Cards from './Cards';
+import Title from './Title';
 
 const Tips = () => {
   return (
     <section className={styles['tips']}>
+      <div className={styles['intro-container']}>
+        <div className={styles['flex-intro']}>
+          <Title />
+          <Cards />
+        </div>
+      </div>
       <div className={styles['tips-container']}>
         <div className={styles['grid-tips']}>
           <div className={styles.tip}>
