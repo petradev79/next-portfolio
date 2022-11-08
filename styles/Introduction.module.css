@@ -24,6 +24,7 @@
 
 /* TITLE */
 .title {
+  position: relative;
   flex: 1;
 }
 
@@ -67,64 +68,5 @@
 }
 
 .title p span:hover {
-  color: rgb(var(--color-accent));
-}
-
-/* TIPS  */
-.grid-tips {
-  width: min(100%, 36em);
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-areas:
-    '. tip_1 tip_1 tip_1 tip_1 .'
-    'tip_2 tip_2 tip_2 tip_3 tip_3 tip_3'
-    '. tip_4 tip_4 tip_4 tip_4 .';
-}
-
-.flex-tip {
-  padding: 1em;
-  align-items: flex-start;
-  flex-direction: column;
-  --flex-gap-space: 0.5rem;
-  background: rgb(var(--color-dark-two));
-  border-radius: 1em;
-  box-shadow: 0 0.25em 1em rgba(var(--color-black), 0.35);
-}
-
-.flex-tip h4 {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.flex-tip p {
-  font-size: 0.9rem;
-}
-
-.flex-tip:nth-child(1) {
-  grid-area: tip_1;
-}
-.flex-tip:nth-child(2) {
-  grid-area: tip_2;
-}
-.flex-tip:nth-child(3) {
-  grid-area: tip_3;
-}
-.flex-tip:nth-child(4) {
-  grid-area: tip_4;
-}
-
-.flex-tip:nth-child(1) h4 {
-  color: rgb(var(--color-success));
-}
-
-.flex-tip:nth-child(2) h4 {
-  color: rgb(var(--color-warning));
-}
-
-.flex-tip:nth-child(3) h4 {
-  color: rgb(var(--color-primary));
-}
-
-.flex-tip:nth-child(4) h4 {
   color: rgb(var(--color-accent));
 }

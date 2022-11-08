@@ -3,7 +3,6 @@ import styles from '../../styles/Introduction.module.css';
 import Title from './Title';
 import { TitleInterface } from '../../types';
 import shapes from '../../assets/shapes.svg';
-import Content from './Content';
 
 const Introduction: React.FC<TitleInterface> = ({ main, description }) => {
   return (
