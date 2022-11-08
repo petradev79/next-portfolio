@@ -1,5 +1,5 @@
 import sanityClient from '@sanity/client';
-// import imageUrlBuilder from '@sanity/image-url';
+import imageUrlBuilder from '@sanity/image-url';
 
 export const client = sanityClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
@@ -8,6 +8,6 @@ export const client = sanityClient({
   apiVersion: '2021-10-21',
 });
 
-// const builder = imageUrlBuilder(client);
+const builder = imageUrlBuilder(client);
 
-// export const urlFor = (source) => builder.image(source);
+export const urlFor = source => builder.image(source);

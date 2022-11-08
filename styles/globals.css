@@ -136,7 +136,7 @@ p {
 } */
 
 /* COLORS  */
-/* .color-primary {
+.color-primary {
   color: rgb(var(--color-primary));
 }
 .color-accent {
@@ -147,6 +147,6 @@ p {
 }
 .color-warning {
   color: var(--color-warning);
-} */
+}
 
 /********************************/
