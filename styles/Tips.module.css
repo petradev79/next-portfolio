@@ -8,7 +8,7 @@
 }
 
 .flex-intro {
-  margin-bottom: 8rem;
+  margin-bottom: 15rem;
   align-items: center;
   justify-content: space-between;
   --flex-gap-space: 3rem;
@@ -22,8 +22,10 @@
   max-width: calc(55rem + var(--container-padding-inline));
 }
 
-.grid-tips {
-  --grid-gap-space: 5rem;
+.tip:not(:last-child) {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(var(--color-accent), 0.1);
 }
 
 .title h2,
@@ -38,6 +40,14 @@
 .tip h3 span {
   color: rgb(var(--color-accent));
 }
+
+/* .tip h4 {
+  margin-bottom: 2rem;
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba(var(--color-white), 0.85);
+} */
 
 .title p,
 .tip p {
