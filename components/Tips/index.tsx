@@ -1,19 +1,35 @@
 import styles from '../../styles/Tips.module.css';
+import SectionTitle from '../SectionTitle';
 import Cards from './Cards';
-import Title from './Title';
 
 const Tips = () => {
   return (
     <section className={styles['tips']}>
-      <div className={styles['intro-container']}>
-        <div className={styles['flex-intro']}>
-          <Title />
+      <div className='intro-container'>
+        <div className='flex-intro'>
+          <SectionTitle>
+            <>
+              <h2>
+                4 Tips to <span>improve your coding skills</span>
+              </h2>
+              <p>
+                There is no end of learning in the IT industry. Some would say
+                that there is no industry that is so dynamic and inviting as
+                software development. As a developer, you probably want to{' '}
+                <span>improve your skills</span> constantly and be the best
+                developer you can possibly be.
+              </p>
+              <p>
+                Check out these four tips that have helped me in my career to
+                become a <span>better and more efficient developer</span>.
+              </p>
+            </>
+          </SectionTitle>
           <Cards />
         </div>
       </div>
       <div className={styles['tips-container']}>
         <div className={styles.tip}>
-          {/* <h4>1. Define your vision</h4> */}
           <h3>
             1. Before start coding{' '}
             <span>define your vision and start planning</span>
@@ -45,7 +61,6 @@ const Tips = () => {
           </ul>
         </div>
         <div className={styles.tip}>
-          {/* <h4>2. Teamwork and collaboration</h4> */}
           <h3>
             2. It's no secret that{' '}
             <span>teamwork and collaboration skills</span> are good for business

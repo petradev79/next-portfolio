@@ -1,0 +1,72 @@
+/* TITLE 1 */
+.title1 {
+  position: relative;
+  flex: 1;
+}
+
+.title1 h1 {
+  position: relative;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.title1 h1 span {
+  color: rgb(var(--color-primary));
+}
+
+.title1 .clip-path {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  color: rgb(var(--color-accent));
+  clip-path: circle(var(--z) at var(--x, 50%) var(--y, 50%));
+}
+
+.title1 .clip-path span {
+  color: rgb(var(--color-accent));
+}
+
+.title1 h1:hover .clip-path {
+  --z: 7rem;
+}
+
+.title1 p {
+  max-width: 46ch;
+}
+
+.title1 p a {
+  text-decoration: none;
+  color: rgb(var(--color-primary));
+  transition: all 0.2s ease-in-out;
+}
+
+.title1 p a:hover {
+  color: rgb(var(--color-accent));
+}
+
+/* TITLE 2 */
+.title2 {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.title2 h2 {
+  margin-bottom: 2rem;
+}
+
+.title2 h2 span {
+  color: rgb(var(--color-primary));
+}
+
+.title2 p {
+  margin-bottom: 1rem;
+}
+
+.title2 p span {
+  font-weight: 700;
+  color: rgb(var(--color-white));
+}

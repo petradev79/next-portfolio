@@ -1,8 +1,7 @@
 import { useEffect } from 'react';
-import styles from '../../styles/Introduction.module.css';
-import { TitleInterface } from '../../types';
+import styles from '../../styles/Title.module.css';
 
-const Title: React.FC<TitleInterface> = ({ main, description }) => {
+const MainTitle: React.FC<{ children: JSX.Element }> = ({ children }) => {
   useEffect(() => {
     window.addEventListener('mousemove', editCursor);
   }, []);
@@ -17,17 +16,7 @@ const Title: React.FC<TitleInterface> = ({ main, description }) => {
     style.setProperty('--y', y - clipY + 'px');
   };
 
-  return (
-    <div className={styles.title}>
-      <h1>
-        {main}
-        <div className={styles['clip-path']} id='clipPath'>
-          {main}
-        </div>
-      </h1>
-      <p>{description}</p>
-    </div>
-  );
+  return <div className={styles.title1}>{children}</div>;
 };
 
-export default Title;
+export default MainTitle;

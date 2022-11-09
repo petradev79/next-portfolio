@@ -3,10 +3,6 @@ export interface MetaInterface {
   keywords?: string;
   description?: string;
 }
-export interface TitleInterface {
-  main: (string | JSX.Element)[];
-  description: (string | JSX.Element)[];
-}
 
 export interface ProjectInterface {
   _id: string;
@@ -20,6 +16,9 @@ export interface ProjectInterface {
       _ref: string;
     };
   };
+  destination: string;
+  website: string;
+  tags: string[];
 }
 
 export interface ProjectsInterface {

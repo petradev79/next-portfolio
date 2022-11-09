@@ -1,5 +1,5 @@
 .header {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   position: fixed;
   z-index: 100;
   width: 100%;
@@ -7,11 +7,19 @@
 }
 
 .header-container {
-  max-width: 90rem;
+  max-width: calc(90rem + var(--container-padding-inline));
   padding: 1rem 2rem;
 
   display: flex;
   align-items: center;
   gap: 3rem;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+}
+
+.header a {
+  color: rgb(var(--color-white));
+}
+
+.header a.active {
+  color: rgb(var(--color-primary));
 }

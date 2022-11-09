@@ -1,8 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import styles from '../../styles/Header.module.css';
 
 const Header = () => {
+  const router = useRouter();
+
   return (
     <nav className={styles.header}>
       <div className={styles['header-container']}>
@@ -16,8 +19,24 @@ const Header = () => {
           />
         </div>
         <div className='flex-menu'>
-          <Link href='/'>Home</Link>
-          <Link href='/about'>About</Link>
+          <Link
+            className={router.pathname == '/' ? styles.active : ''}
+            href='/'
+          >
+            Home
+          </Link>
+          <Link
+            className={router.pathname == '/about' ? styles.active : ''}
+            href='/about'
+          >
+            About
+          </Link>
+          <Link
+            className={router.pathname == '/work' ? styles.active : ''}
+            href='/work'
+          >
+            Work
+          </Link>
         </div>
       </div>
     </nav>

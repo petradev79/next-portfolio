@@ -104,6 +104,21 @@ p {
   color: rgb(var(--color-white), 0.8);
 }
 
+/* INTRODUCTION */
+.banner {
+  position: relative;
+  padding-block: 15rem 10rem;
+  background: linear-gradient(
+      to right top,
+      rgba(var(--color-dark-one), 1) 0%,
+      rgba(var(--color-dark-one), 1) 65%,
+      rgba(var(--color-dark-one), 0.75) 75%
+    ),
+    url('../assets/code.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
 /* LAYOUT  */
 [class*='grid-'] {
   display: grid;
@@ -121,7 +136,7 @@ p {
   padding-inline: var(--container-padding-inline);
 }
 
-/* .grid-center {
+.grid-center {
   place-items: center;
 }
 
@@ -133,7 +148,22 @@ p {
 .flex-between {
   align-items: center;
   justify-content: space-between;
-} */
+}
+
+.banner-container {
+  max-width: calc(90rem + var(--container-padding-inline));
+}
+
+.flex-intro {
+  margin-bottom: 15rem;
+  align-items: center;
+  justify-content: space-between;
+  --flex-gap-space: 3rem;
+}
+
+.intro-container {
+  max-width: calc(80rem + var(--container-padding-inline));
+}
 
 /* COLORS  */
 .color-primary {
