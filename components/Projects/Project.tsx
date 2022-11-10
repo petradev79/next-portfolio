@@ -1,56 +1,75 @@
+import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { FaDownload, FaArrowUp } from 'react-icons/fa';
+import { BiGitBranch, BiLink } from 'react-icons/bi';
 import { urlFor } from '../../sanity';
 import { ProjectInterface } from '../../types';
 import styles from '../../styles/Projects.module.css';
 
 const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
+  const router = useRouter();
   const [postHovered, setPostHovered] = useState(false);
 
   return (
     <div
       onMouseEnter={() => setPostHovered(true)}
       onMouseLeave={() => setPostHovered(false)}
-      // onClick={() => navigate(`/pin-detail/${_id}`)}
+      // href={`project/${project.slug.current}`}
+      onClick={() => router.push(`/project/${project.slug.current}`)}
       className={styles.project}
     >
-      {project.mainImage && (
+      <div className={styles['project-layer']}></div>
+      {project.image && (
         <img
           className={styles['project-img']}
-          src={urlFor(project.mainImage).width(250).url()}
-          alt='user-post'
+          src={urlFor(project.image).width(300).url()}
+          alt='Project'
         />
       )}
       {postHovered && (
         <div className={styles['project-content']} style={{ height: '100%' }}>
           <div className='flex-between'>
-            <div className='flex gap-2'>
-              <a
-                href={project.website}
-                target='_blank'
-                onClick={(e) => {
-                  e.stopPropagation();
-                }}
-                className='bg-white w-9 h-9 p-2 rounded-full flex items-center justify-center text-dark text-xl opacity-75 hover:opacity-100 hover:shadow-md outline-none'
-              >
-                <FaDownload />
-              </a>
+            <h4>{project.slug.current}</h4>
+            <div className={styles['project-actions']}>
+              <div className={styles['project-link']}>
+                <a
+                  href={project.destination}
+                  target='_blank'
+                  onClick={(e) => {
+                    e.stopPropagation();
+                  }}
+                >
+                  <BiLink />
+                </a>
+              </div>
+              <div className={styles['project-link']}>
+                <a
+                  href={project.website}
+                  target='_blank'
+                  onClick={(e) => {
+                    e.stopPropagation();
+                  }}
+                >
+                  <BiGitBranch />
+                </a>
+              </div>
             </div>
-            <p>yrfh</p>
           </div>
-          <div className='flex-between'>
-            {project.destination?.slice(8).length > 0 ? (
-              <a
-                href={project.destination}
-                target='_blank'
-                className='bg-white flex items-center gap-2 text-black font-bold p-2 pl-4 pr-4 rounded-full opacity-70 hover:opacity-100 hover:shadow-md'
-                rel='noreferrer'
-              >
-                {' '}
-                <FaArrowUp />
-                {project.destination?.slice(8, 17)}...
-              </a>
-            ) : undefined}
+
+          <div>
+            <p>{project.summary}</p>
+            <div className={styles['project-tags']}>
+              {project.tags?.length < 3
+                ? project.tags?.map((tag) => (
+                    <span key={tag._id} className={styles['project-tag']}>
+                      {tag.title}
+                    </span>
+                  ))
+                : project.tags?.slice(0, 3).map((tag) => (
+                    <span key={tag._id} className={styles['project-tag']}>
+                      {tag.title}
+                    </span>
+                  ))}
+            </div>
           </div>
         </div>
       )}

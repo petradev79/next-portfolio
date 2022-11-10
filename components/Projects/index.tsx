@@ -1,11 +1,10 @@
 import styles from '../../styles/Projects.module.css';
 import SectionTitle from '../SectionTitle';
 
-import { urlFor } from '../../sanity';
-import { ProjectsInterface } from '../../types';
+import { ProjectInterface } from '../../types';
 import Project from './Project';
 
-const Projects: React.FC<ProjectsInterface> = ({ projects }) => {
+const Projects: React.FC<{ projects: ProjectInterface[] }> = ({ projects }) => {
   return (
     <section className={styles['projects']}>
       <div className='intro-container'>

@@ -10,32 +10,73 @@
 .project {
   position: relative;
   width: auto;
-  border-radius: 1rem;
+  border-radius: 1em;
   overflow: hidden;
   cursor: pointer;
-  transition: all 0.5s ease-in-out;
-
-  display: inline-block;
+  box-shadow: 0 0.25em 1em rgba(var(--color-black), 0.35);
 }
 
-.project:hover {
-  box-shadow: 0 2rem 4rem rgb(var(--color-white));
-}
-
-/* .project-img {
+.project-layer {
+  position: absolute;
   width: 100%;
-  height: auto;
-  border-radius: 1rem;
-} */
+  height: 100%;
+  transition: all 0.25s ease-in-out;
+}
+
+.project:hover .project-layer {
+  background: rgba(var(--color-white), 0.8);
+}
 
 .project-content {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-  padding: 1rem 2rem;
+  padding: 2rem 1rem;
 
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  background: url(../assets/shape-one.svg);
+}
+
+.project-content h4 {
+  color: rgba(var(--color-black), 0.8);
+}
+
+.project-content p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: rgba(var(--color-black));
+}
+
+.project-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-link {
+  padding: 0.7rem;
+  background: rgba(var(--color-black), 0.75);
+  border-radius: 50%;
+  box-shadow: 0.1em 0.3em 0.5em 0 rgba(var(--color-black), 0.75);
+}
+
+.project-link a {
+  color: rgba(var(--color-white), 0.85);
+}
+
+.project-tags {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-tag {
+  padding: 0.5rem 0.7rem;
+  font-size: 0.8rem;
+  color: rgba(var(--color-white), 0.85);
+  background: rgba(var(--color-black), 0.75);
+  border-radius: 0.5rem;
 }

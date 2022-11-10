@@ -9,6 +9,7 @@ const MainTitle: React.FC<{ children: JSX.Element }> = ({ children }) => {
   const editCursor = (e: any) => {
     const style = document.documentElement.style;
     const clipPath = document.getElementById('clipPath');
+    if (!clipPath) return;
     const { clientX: x, clientY: y } = e;
     const { x: clipX, y: clipY } = clipPath!.getBoundingClientRect();
 

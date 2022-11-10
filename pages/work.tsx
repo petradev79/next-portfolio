@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { client } from '../sanity';
-import { ProjectsInterface } from '../types';
+import { ProjectInterface } from '../types';
 
 import styles from '../styles/Title.module.css';
 import shapes from '../assets/shapes.svg';
@@ -9,7 +9,21 @@ import Projects from '../components/Projects';
 import MainTitle from '../components/MainTitle';
 
 export const getStaticProps = async () => {
-  const query = '*[_type == "project"]';
+  const query = `*[_type == "project"] {
+    _id,
+    title,
+    summary,
+    slug,
+    image,
+    destination,
+    website,
+    tags[] -> {
+      _id,
+      title,
+      image,
+      source
+    }
+  }`;
   const projects = await client.fetch(query);
 
   return {
@@ -19,7 +33,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const Work: React.FC<ProjectsInterface> = ({ projects }) => {
+const Work: React.FC<{ projects: ProjectInterface[] }> = ({ projects }) => {
   console.log(projects);
 
   return (

@@ -7,20 +7,27 @@ export interface MetaInterface {
 export interface ProjectInterface {
   _id: string;
   title: string;
-  description: string;
+  summary: string;
   slug: {
     current: string;
   };
-  mainImage: {
+  image: {
     asset: {
       _ref: string;
     };
   };
   destination: string;
   website: string;
-  tags: string[];
+  tags: TagInterface[];
 }
 
-export interface ProjectsInterface {
-  projects: ProjectInterface[];
+interface TagInterface {
+  _id: string;
+  title: string;
+  source: string;
+  image: {
+    asset: {
+      _ref: string;
+    };
+  };
 }
