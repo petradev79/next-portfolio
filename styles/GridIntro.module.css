@@ -1,0 +1,59 @@
+/* GRID INTRO  */
+.grid-intro {
+  width: min(100%, 36em);
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    '. card_1 card_1 card_1 card_1 .'
+    'card_2 card_2 card_2 card_3 card_3 card_3'
+    '. card_4 card_4 card_4 card_4 .';
+}
+
+.flex-card {
+  padding: 1em;
+  align-items: flex-start;
+  flex-direction: column;
+  --flex-gap-space: 0.5rem;
+  background: rgb(var(--color-dark-two));
+
+  border-radius: 1em;
+  box-shadow: 0 0.25em 1em rgba(var(--color-black), 0.35);
+}
+
+.flex-card h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.flex-card p {
+  font-size: 0.9rem;
+}
+
+.flex-card:nth-child(1) {
+  grid-area: card_1;
+}
+.flex-card:nth-child(2) {
+  grid-area: card_2;
+}
+.flex-card:nth-child(3) {
+  grid-area: card_3;
+}
+.flex-card:nth-child(4) {
+  grid-area: card_4;
+}
+
+.flex-card:nth-child(1) h4 {
+  color: rgb(var(--color-success));
+}
+
+.flex-card:nth-child(2) h4 {
+  color: rgb(var(--color-warning));
+}
+
+.flex-card:nth-child(3) h4 {
+  color: rgb(var(--color-primary));
+}
+
+.flex-card:nth-child(4) h4 {
+  color: rgb(var(--color-accent));
+}

@@ -4,12 +4,12 @@
 }
 
 .projects-container {
-  max-width: calc(55rem + var(--container-padding-inline));
+  max-width: calc(80rem + var(--container-padding-inline));
 }
 
 .project {
   position: relative;
-  width: auto;
+  max-width: 20rem;
   border-radius: 1em;
   overflow: hidden;
   cursor: pointer;
@@ -24,7 +24,7 @@
 }
 
 .project:hover .project-layer {
-  background: rgba(var(--color-white), 0.8);
+  background: rgba(var(--color-white), 0.85);
 }
 
 .project-content {

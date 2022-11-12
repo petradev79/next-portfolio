@@ -28,7 +28,8 @@
   --color-primary: 15, 197, 176;
   --color-accent: 197, 153, 64;
   --color-success: 48, 146, 196;
-  --color-warning: 209, 87, 87;
+  /* --color-warning: 209, 87, 87; */
+  --color-warning: 177, 98, 104;
 
   --color-dark-one: 34, 37, 41;
   --color-dark-two: 39, 42, 46;
@@ -99,7 +100,7 @@ h4 {
 }
 
 p {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   color: rgb(var(--color-white), 0.8);
 }
@@ -143,6 +144,7 @@ p {
 .flex-center {
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .flex-between {
@@ -180,3 +182,7 @@ p {
 }
 
 /********************************/
+.test-code-img {
+  border-radius: 1em;
+  box-shadow: -0.5em 0.5em 4em rgba(var(--color-black), 0.35);
+}

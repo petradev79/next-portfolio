@@ -2,20 +2,16 @@ import Image from 'next/image';
 
 import styles from '../styles/Title.module.css';
 import shapes from '../assets/shapes.svg';
-import { ProjectsInterface } from '../types';
 import Meta from '../components/Meta';
-import Projects from '../components/Projects';
-import MainTitle from '../components/MainTitle';
+import Title from '../components/Title';
 
-const Work: React.FC<ProjectsInterface> = ({ projects }) => {
-  console.log(projects);
-
+const About = () => {
   return (
     <>
       <Meta title='Ivan Petrovic | About' />
       <section className='banner'>
         <div className='banner-container flex-between'>
-          <MainTitle>
+          <Title>
             <>
               <h1>
                 building <span>projects</span> improve your skills
@@ -37,7 +33,7 @@ const Work: React.FC<ProjectsInterface> = ({ projects }) => {
                 actual code.
               </p>
             </>
-          </MainTitle>
+          </Title>
           <Image src={shapes} width={500} alt='about' />
         </div>
       </section>
@@ -45,4 +41,4 @@ const Work: React.FC<ProjectsInterface> = ({ projects }) => {
   );
 };
 
-export default Work;
+export default About;

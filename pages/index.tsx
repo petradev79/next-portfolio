@@ -1,16 +1,14 @@
-import Image from 'next/image';
 import styles from '../styles/Title.module.css';
-import MainTitle from '../components/MainTitle';
+import Title from '../components/Title';
+import GridIntro from '../components/GridIntro';
 import Tips from '../components/Tips';
-
-import shapes from '../assets/shapes.svg';
 
 const Home = () => {
   return (
     <>
       <section className='banner'>
         <div className='banner-container flex-between'>
-          <MainTitle>
+          <Title>
             <>
               <h1>
                 design and <span>build</span> beautiful content
@@ -19,7 +17,7 @@ const Home = () => {
                 </div>
               </h1>
               <p>
-                My name is Ivan Petrovic, currently working at
+                My name is Ivan Petrovic, currently working at{' '}
                 <a
                   href='https://www.ingsoftware.com/'
                   target='_blank'
@@ -31,8 +29,8 @@ const Home = () => {
                 specializing in building frontend user experiences.
               </p>
             </>
-          </MainTitle>
-          <Image src={shapes} width={500} alt='portfolio' />
+          </Title>
+          <GridIntro />
         </div>
       </section>
       <Tips />

@@ -3,10 +3,10 @@ import { client } from '../sanity';
 import { ProjectInterface } from '../types';
 
 import styles from '../styles/Title.module.css';
-import shapes from '../assets/shapes.svg';
+import card from '../assets/card.svg';
 import Meta from '../components/Meta';
 import Projects from '../components/Projects';
-import MainTitle from '../components/MainTitle';
+import Title from '../components/Title';
 
 export const getStaticProps = async () => {
   const query = `*[_type == "project"] {
@@ -41,7 +41,7 @@ const Work: React.FC<{ projects: ProjectInterface[] }> = ({ projects }) => {
       <Meta title='Ivan Petrovic | Work' />
       <section className='banner'>
         <div className='banner-container flex-between'>
-          <MainTitle>
+          <Title>
             <>
               <h1>
                 building <span>projects</span> improve your skills
@@ -63,8 +63,8 @@ const Work: React.FC<{ projects: ProjectInterface[] }> = ({ projects }) => {
                 actual code.
               </p>
             </>
-          </MainTitle>
-          <Image src={shapes} width={500} alt='portfolio' />
+          </Title>
+          <Image src={card} width={350} alt='work' className='test-code-img' />
         </div>
       </section>
       <Projects projects={projects} />

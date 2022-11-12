@@ -1,18 +1,20 @@
+import Image from 'next/image';
 import styles from '../../styles/Tips.module.css';
+import card from '../../assets/Shopping_merchandise_header.jpeg';
 import SectionTitle from '../SectionTitle';
-import Cards from './Cards';
 
 const Tips = () => {
   return (
     <section className={styles['tips']}>
       <div className='intro-container'>
         <div className='flex-intro'>
+          <Image src={card} width={500} alt='work' className='test-code-img' />
           <SectionTitle>
             <>
               <h2>
                 4 Tips to <span>improve your coding skills</span>
               </h2>
-              <p>
+              {/* <p>
                 There is no end of learning in the IT industry. Some would say
                 that there is no industry that is so dynamic and inviting as
                 software development. As a developer, you probably want to{' '}
@@ -22,10 +24,10 @@ const Tips = () => {
               <p>
                 Check out these four tips that have helped me in my career to
                 become a <span>better and more efficient developer</span>.
-              </p>
+              </p> */}
             </>
           </SectionTitle>
-          <Cards />
+          {/* <Image src={card} width={500} alt='work' className='test-code-img' /> */}
         </div>
       </div>
       <div className={styles['tips-container']}>
@@ -60,6 +62,7 @@ const Tips = () => {
             </li>
           </ul>
         </div>
+
         <div className={styles.tip}>
           <h3>
             2. It's no secret that{' '}

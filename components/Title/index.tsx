@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import styles from '../../styles/Title.module.css';
 
-const MainTitle: React.FC<{ children: JSX.Element }> = ({ children }) => {
+const Title: React.FC<{ children: JSX.Element }> = ({ children }) => {
   useEffect(() => {
     window.addEventListener('mousemove', editCursor);
   }, []);
@@ -17,7 +17,7 @@ const MainTitle: React.FC<{ children: JSX.Element }> = ({ children }) => {
     style.setProperty('--y', y - clipY + 'px');
   };
 
-  return <div className={styles.title1}>{children}</div>;
+  return <div className={styles.title}>{children}</div>;
 };
 
-export default MainTitle;
+export default Title;
