@@ -4,24 +4,70 @@
 }
 
 .tips-container {
-  max-width: calc(60rem + var(--container-padding-inline));
+  max-width: calc(70rem + var(--container-padding-inline));
 }
+
+.tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.tip div {
+  position: relative;
+  flex: 1;
+  /* padding-top: 2rem;
+  border-top: 1px solid rgba(var(--color-accent), 0.1); */
+  z-index: 1;
+}
+
+.tip div::after {
+  content: '';
+  position: absolute;
+  right: -1rem;
+  bottom: -2rem;
+  width: 100%;
+  height: 110%;
+  background: url(../assets/shape-two.svg);
+
+  z-index: -1;
+}
+
+/* .tip:nth-child(even) {
+  flex-direction: row-reverse;
+} */
 
 .tip:not(:last-child) {
   margin-bottom: 3rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(var(--color-accent), 0.1);
+  padding-bottom: 5rem;
+  /* border-bottom: 1px solid rgba(var(--color-accent), 0.1); */
 }
 
 .tip h3 {
+  position: relative;
   margin-bottom: 2rem;
+  flex: 1.25;
+  z-index: 1;
+}
+
+.tip h3::after {
+  content: '';
+  position: absolute;
+  left: -20%;
+  top: -60%;
+  width: 20rem;
+  height: 20rem;
+  background: url(../assets/h3\ before.svg);
+  background-size: cover;
+
+  z-index: -1;
 }
 
 .tip h3 span {
   color: rgb(var(--color-accent));
 }
 
-.tip p {
+.tip p:not(:last-child) {
   margin-bottom: 1rem;
 }
 
@@ -30,10 +76,13 @@
 }
 
 .tip ul li {
-  margin-bottom: 1rem;
   font-size: 1.1rem;
   line-height: 1.5;
   color: rgb(var(--color-white), 0.8);
+}
+
+.tip ul li:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 .tip p span,
@@ -43,9 +92,9 @@
 }
 
 .tip ul li::before {
-  content: '•';
+  content: '-';
   display: inline-block;
   width: 1em;
   margin-left: -1em;
-  color: rgb(var(--color-success));
+  color: rgb(var(--color-primary));
 }

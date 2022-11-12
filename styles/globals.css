@@ -28,8 +28,7 @@
   --color-primary: 15, 197, 176;
   --color-accent: 197, 153, 64;
   --color-success: 48, 146, 196;
-  /* --color-warning: 209, 87, 87; */
-  --color-warning: 177, 98, 104;
+  --color-warning: 209, 87, 87;
 
   --color-dark-one: 34, 37, 41;
   --color-dark-two: 39, 42, 46;
@@ -157,10 +156,27 @@ p {
 }
 
 .flex-intro {
-  margin-bottom: 15rem;
-  align-items: center;
-  justify-content: space-between;
+  position: relative;
+  margin: 10rem 0 20rem;
+  align-items: flex-start;
+  /* justify-content: space-between; */
   --flex-gap-space: 3rem;
+  z-index: 1;
+}
+
+.flex-intro::before {
+  content: '';
+  position: absolute;
+  left: 10%;
+  top: -10%;
+  width: 80%;
+  height: 120%;
+  background: url(../assets/shape-one.svg);
+  background-size: cover;
+  background-position: center;
+  transform: rotate(15deg);
+
+  z-index: -1;
 }
 
 .intro-container {
