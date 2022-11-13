@@ -3,7 +3,7 @@ import { client } from '../sanity';
 import { ProjectInterface } from '../types';
 
 import styles from '../styles/Title.module.css';
-import card from '../assets/card.svg';
+import card from '../assets/Shopping_merchandise_header.jpeg';
 import Meta from '../components/Meta';
 import Projects from '../components/Projects';
 import Title from '../components/Title';
@@ -38,7 +38,7 @@ const Work: React.FC<{ projects: ProjectInterface[] }> = ({ projects }) => {
 
   return (
     <>
-      <Meta title='Ivan Petrovic | Work' />
+      <Meta title='Projects' />
       <section className='banner'>
         <div className='banner-container flex-between'>
           <Title>
@@ -64,7 +64,12 @@ const Work: React.FC<{ projects: ProjectInterface[] }> = ({ projects }) => {
               </p>
             </>
           </Title>
-          <Image src={card} width={350} alt='work' className='test-code-img' />
+          <Image
+            src={card}
+            width={350}
+            alt='Projects'
+            className='test-code-img'
+          />
         </div>
       </section>
       <Projects projects={projects} />

@@ -152,19 +152,18 @@ p {
   padding-inline: var(--container-padding-inline);
 }
 
-/* .grid-center {
-  place-items: center;
-} */
-
 .flex-center {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  --flex-gap-space: 1rem;
 }
 
 .flex-between {
-  align-items: center;
+  /* align-items: flex-end; */
   justify-content: space-between;
+  /* --flex-gap-space: 2rem; */
+  /* flex-direction: column; */
 }
 
 .flex-section {

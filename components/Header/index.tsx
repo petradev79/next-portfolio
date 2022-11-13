@@ -32,10 +32,10 @@ const Header = () => {
             About
           </Link>
           <Link
-            className={router.pathname == '/work' ? styles.active : ''}
-            href='/work'
+            className={router.pathname == '/projects' ? styles.active : ''}
+            href='/projects'
           >
-            Work
+            Projects
           </Link>
         </div>
       </div>

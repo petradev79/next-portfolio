@@ -5,7 +5,7 @@ import { urlFor } from '../../sanity';
 import { ProjectInterface } from '../../types';
 import styles from '../../styles/Projects.module.css';
 
-const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
+const Card: React.FC<{ project: ProjectInterface }> = ({ project }) => {
   const router = useRouter();
   const [postHovered, setPostHovered] = useState(false);
 
@@ -28,29 +28,35 @@ const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
       {postHovered && (
         <div className={styles['project-content']} style={{ height: '100%' }}>
           <div className='flex-between'>
-            <h4>{project.slug.current}</h4>
+            <h3>{project.title}</h3>
             <div className={styles['project-actions']}>
-              <div className={styles['project-link']}>
-                <a
-                  href={project.destination}
-                  target='_blank'
-                  onClick={(e) => {
-                    e.stopPropagation();
-                  }}
-                >
-                  <BiLink />
-                </a>
+              <div className={styles['link-wrapper']}>
+                <div className={styles['project-link']}>
+                  <a
+                    href={project.destination}
+                    target='_blank'
+                    onClick={e => {
+                      e.stopPropagation();
+                    }}
+                  >
+                    <BiLink />
+                  </a>
+                </div>
+                <span>website</span>
               </div>
-              <div className={styles['project-link']}>
-                <a
-                  href={project.website}
-                  target='_blank'
-                  onClick={(e) => {
-                    e.stopPropagation();
-                  }}
-                >
-                  <BiGitBranch />
-                </a>
+              <div className={styles['link-wrapper']}>
+                <div className={styles['project-link']}>
+                  <a
+                    href={project.website}
+                    target='_blank'
+                    onClick={e => {
+                      e.stopPropagation();
+                    }}
+                  >
+                    <BiGitBranch />
+                  </a>
+                </div>
+                <span>code</span>
               </div>
             </div>
           </div>
@@ -59,12 +65,12 @@ const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
             <p>{project.summary}</p>
             <div className={styles['project-tags']}>
               {project.tags?.length < 3
-                ? project.tags?.map((tag) => (
+                ? project.tags?.map(tag => (
                     <span key={tag._id} className={styles['project-tag']}>
                       {tag.title}
                     </span>
                   ))
-                : project.tags?.slice(0, 3).map((tag) => (
+                : project.tags?.slice(0, 3).map(tag => (
                     <span key={tag._id} className={styles['project-tag']}>
                       {tag.title}
                     </span>
@@ -77,4 +83,4 @@ const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
   );
 };
 
-export default Project;
+export default Card;
