@@ -47,27 +47,3 @@
 .title p a:hover {
   color: rgb(var(--color-accent));
 }
-
-/* TITLE 2 */
-.title2 {
-  flex: 1;
-  position: relative;
-  z-index: 1;
-}
-
-.title2 h2 {
-  margin-bottom: 2rem;
-}
-
-.title2 h2 span {
-  color: rgb(var(--color-primary));
-}
-
-.title2 p {
-  margin-bottom: 1rem;
-}
-
-.title2 p span {
-  font-weight: 700;
-  color: rgb(var(--color-white));
-}

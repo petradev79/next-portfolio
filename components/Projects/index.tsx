@@ -1,5 +1,5 @@
 import styles from '../../styles/Projects.module.css';
-import SectionTitle from '../SectionTitle';
+// import SectionTitle from '../SectionTitle';
 
 import { ProjectInterface } from '../../types';
 import Project from './Project';
@@ -9,7 +9,7 @@ const Projects: React.FC<{ projects: ProjectInterface[] }> = ({ projects }) => {
     <section className={styles['projects']}>
       <div className='intro-container'>
         <div className={styles['flex-intro']}>
-          <SectionTitle>
+          {/* <SectionTitle>
             <>
               <h2>
                 4 Tips to <span>improve your coding skills</span>
@@ -26,12 +26,12 @@ const Projects: React.FC<{ projects: ProjectInterface[] }> = ({ projects }) => {
                 become a <span>better and more efficient developer</span>.
               </p>
             </>
-          </SectionTitle>
+          </SectionTitle> */}
         </div>
       </div>
       <div className={styles['projects-container']}>
         <div className='flex-center'>
-          {projects.map((project) => (
+          {projects.map(project => (
             <Project key={project._id} project={project} />
           ))}
         </div>

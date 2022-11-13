@@ -14,21 +14,23 @@ const Cards = () => {
           <FaCode />
           Define your vision
         </h4>
-        <p>A good start is half the battle, said someone wiser than me.</p>
+        <p>
+          A good start is half the battle, before start coding start planning.
+        </p>
       </div>
       <div className={styles['flex-card']}>
         <h4>
           <FaCodeBranch />
           Teamwork and collaboration
         </h4>
-        <p>Teamwork makes the dream work, secret for better results.</p>
+        <p>It's no secret that teamwork is good for business.</p>
       </div>
       <div className={styles['flex-card']}>
         <h4>
           <FaHatWizard />
           User experience
         </h4>
-        <p>Web applications are all about user interaction.</p>
+        <p>People ignore design that ignores people.</p>
       </div>
       <div className={styles['flex-card']}>
         <h4>
