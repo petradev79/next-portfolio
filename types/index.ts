@@ -11,7 +11,12 @@ export interface ProjectInterface {
   slug: {
     current: string;
   };
-  image: {
+  imageCard: {
+    asset: {
+      _ref: string;
+    };
+  };
+  imageSection: {
     asset: {
       _ref: string;
     };

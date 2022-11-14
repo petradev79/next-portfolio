@@ -87,6 +87,12 @@ ul {
   box-shadow: -2em 2em 4em rgba(var(--color-black), 0.35);
 }
 
+.section-slug {
+  margin-bottom: 1rem;
+  font-size: 1.35rem;
+  color: rgba(var(--color-primary), 0.8);
+}
+
 .section-title h2 {
   margin-bottom: 2rem;
 }
@@ -164,12 +170,11 @@ p {
   --flex-gap-space: 1rem;
 }
 
-.flex-between {
-  /* align-items: flex-end; */
+/* .flex-between {
+  align-items: flex-end;
   justify-content: space-between;
-  /* --flex-gap-space: 2rem; */
-  /* flex-direction: column; */
-}
+  flex-direction: column;
+} */
 
 .flex-section {
   position: relative;

@@ -14,7 +14,7 @@ export const getStaticProps = async () => {
     title,
     summary,
     slug,
-    image,
+    imageCard,
     destination,
     website,
     tags[] -> {

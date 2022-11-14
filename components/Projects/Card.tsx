@@ -16,10 +16,10 @@ const Card: React.FC<{ project: ProjectInterface }> = ({ project }) => {
       onMouseLeave={() => setPostHovered(false)}
       className={styles.project}
     >
-      {project.image && (
+      {project.imageCard && (
         <img
           className={styles['project-img']}
-          src={urlFor(project.image).width(280).url()}
+          src={urlFor(project.imageCard).width(280).url()}
           alt='Project'
         />
       )}
@@ -61,7 +61,7 @@ const Card: React.FC<{ project: ProjectInterface }> = ({ project }) => {
 
           <div>
             <Link
-              href={`project/${project.slug.current}`}
+              href={`details/${project.slug.current}`}
               className={styles['project-link--more']}
             >
               View more

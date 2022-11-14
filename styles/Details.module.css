@@ -1,0 +1,74 @@
+.details {
+  padding: 8rem 0;
+  background: rgb(var(--color-dark-two));
+}
+
+.details-container {
+  max-width: calc(60rem + var(--container-padding-inline));
+}
+
+.details-wrapper {
+  margin-bottom: 5rem;
+  display: flex;
+  gap: 3rem;
+}
+
+.details h3 {
+  position: relative;
+  margin-bottom: 2rem;
+  z-index: 1;
+  flex: 1.25;
+}
+
+.details h3::after {
+  content: '';
+  position: absolute;
+  left: -10rem;
+  top: -5rem;
+  width: 20rem;
+  height: 20rem;
+  background: url(../assets/dots.svg);
+  background-size: cover;
+  z-index: -1;
+}
+
+.details h3 span {
+  color: rgb(var(--color-accent));
+}
+
+.details-tags {
+  flex: 1;
+}
+
+.details-tag {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  margin-bottom: 1rem;
+  font-size: 0.7rem;
+  color: rgba(var(--color-white), 0.85);
+  background: rgba(var(--color-black), 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.details-tag img {
+  border-radius: 0.5rem;
+}
+
+.details-tag a {
+  width: 40px;
+  height: 40px;
+  font-size: 1.1rem;
+  color: rgba(var(--color-white), 0.85);
+  background: rgba(var(--color-black), 0.1);
+  display: grid;
+  place-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.details-tag:hover {
+  background: rgba(var(--color-black), 0.15);
+}
