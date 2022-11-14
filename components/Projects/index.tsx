@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from '../../styles/Projects.module.css';
-import card from '../../assets/code-1.png';
+import sectionImg from '../../assets/code-1.png';
 import { ProjectInterface } from '../../types';
 import Card from './Card';
 
@@ -9,10 +9,10 @@ const Projects: React.FC<{ projects: ProjectInterface[] }> = ({ projects }) => {
     <section className={styles['projects']}>
       <div className='section-container'>
         <div className='flex-section'>
-          <Image src={card} width={500} alt='work' className='test-code-img' />
+          <Image src={sectionImg} width={500} alt='' className='section-img' />
           <div className='section-title'>
             <h2>
-              4 Tips to <span>improve your coding skills</span>
+              Selection of <span>projects</span> I've worked on
             </h2>
             <p>
               There is no end of learning in the IT industry. Some would say
@@ -20,10 +20,6 @@ const Projects: React.FC<{ projects: ProjectInterface[] }> = ({ projects }) => {
               software development. As a developer, you probably want to{' '}
               <span>improve your skills</span> constantly and be the best
               developer you can possibly be.
-            </p>
-            <p>
-              Check out these four tips that have helped me in my career to
-              become a <span>better and more efficient developer</span>.
             </p>
           </div>
         </div>

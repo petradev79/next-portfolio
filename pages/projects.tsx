@@ -3,7 +3,7 @@ import { client } from '../sanity';
 import { ProjectInterface } from '../types';
 
 import styles from '../styles/Title.module.css';
-import card from '../assets/Shopping_merchandise_header.jpeg';
+import pageImg from '../assets/Shopping_merchandise_header.jpeg'; // to fix
 import Meta from '../components/Meta';
 import Projects from '../components/Projects';
 import Title from '../components/Title';
@@ -65,8 +65,8 @@ const Work: React.FC<{ projects: ProjectInterface[] }> = ({ projects }) => {
             </>
           </Title>
           <Image
-            src={card}
-            width={350}
+            src={pageImg}
+            width={500}
             alt='Projects'
             className='test-code-img'
           />

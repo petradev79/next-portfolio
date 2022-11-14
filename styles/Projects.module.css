@@ -13,7 +13,6 @@
   border-radius: 1em;
   box-shadow: 0 0.25em 1em rgba(var(--color-black), 0.35);
   overflow: hidden;
-  cursor: pointer;
 }
 
 .project-layer {
@@ -41,7 +40,7 @@
 }
 
 .project-content h3 {
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -52,7 +51,7 @@
 }
 
 .project-content p {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   font-size: 0.9rem;
   color: rgba(var(--color-white), 0.9);
 }
@@ -88,6 +87,22 @@
 .project-link a {
   font-size: 1.1rem;
   color: rgba(var(--color-white), 0.85);
+}
+
+.project-link--more {
+  padding: 0.7rem;
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 0.3rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: rgba(var(--color-white), 0.85);
+  background: rgba(var(--color-black), 0.1);
+  transition: all 0.2s ease-in;
+}
+
+.project-link--more:hover {
+  color: rgba(var(--color-white));
 }
 
 .project-tags {

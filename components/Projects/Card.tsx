@@ -1,12 +1,16 @@
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
+import Link from 'next/link';
 import { useState } from 'react';
 import { BiGitBranch, BiLink } from 'react-icons/bi';
+import { BsArrowDownRight, BsArrowRight } from 'react-icons/bs';
+import { MdOutlineReadMore } from 'react-icons/md';
+
 import { urlFor } from '../../sanity';
 import { ProjectInterface } from '../../types';
 import styles from '../../styles/Projects.module.css';
 
 const Card: React.FC<{ project: ProjectInterface }> = ({ project }) => {
-  const router = useRouter();
+  // const router = useRouter();
   const [postHovered, setPostHovered] = useState(false);
 
   return (
@@ -14,7 +18,7 @@ const Card: React.FC<{ project: ProjectInterface }> = ({ project }) => {
       onMouseEnter={() => setPostHovered(true)}
       onMouseLeave={() => setPostHovered(false)}
       // href={`project/${project.slug.current}`}
-      onClick={() => router.push(`/project/${project.slug.current}`)}
+      // onClick={() => router.push(`/project/${project.slug.current}`)}
       className={styles.project}
     >
       <div className={styles['project-layer']}></div>
@@ -35,7 +39,7 @@ const Card: React.FC<{ project: ProjectInterface }> = ({ project }) => {
                   <a
                     href={project.destination}
                     target='_blank'
-                    onClick={e => {
+                    onClick={(e) => {
                       e.stopPropagation();
                     }}
                   >
@@ -49,7 +53,7 @@ const Card: React.FC<{ project: ProjectInterface }> = ({ project }) => {
                   <a
                     href={project.website}
                     target='_blank'
-                    onClick={e => {
+                    onClick={(e) => {
                       e.stopPropagation();
                     }}
                   >
@@ -62,15 +66,22 @@ const Card: React.FC<{ project: ProjectInterface }> = ({ project }) => {
           </div>
 
           <div>
+            <Link
+              href={`project/${project.slug.current}`}
+              className={styles['project-link--more']}
+            >
+              View more
+              <BsArrowRight />
+            </Link>
             <p>{project.summary}</p>
             <div className={styles['project-tags']}>
               {project.tags?.length < 3
-                ? project.tags?.map(tag => (
+                ? project.tags?.map((tag) => (
                     <span key={tag._id} className={styles['project-tag']}>
                       {tag.title}
                     </span>
                   ))
-                : project.tags?.slice(0, 3).map(tag => (
+                : project.tags?.slice(0, 3).map((tag) => (
                     <span key={tag._id} className={styles['project-tag']}>
                       {tag.title}
                     </span>
