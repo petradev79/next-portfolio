@@ -1,13 +1,18 @@
 import Image from 'next/image';
 import styles from '../../styles/Tips.module.css';
-import card from '../../assets/1_fopzpyNMN9GPvAIKdsZdaA.png';
+import sectionImg from '../../assets/code-1.png';
 
 const Tips = () => {
   return (
     <section className={styles['tips']}>
       <div className='section-container'>
         <div className='flex-section'>
-          <Image src={card} width={500} alt='work' className='test-code-img' />
+          <Image
+            src={sectionImg}
+            width={500}
+            alt='Code in editor'
+            className='section-img'
+          />
           <div className='section-title'>
             <h2>
               4 Tips to <span>improve your coding skills</span>

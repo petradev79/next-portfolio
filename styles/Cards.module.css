@@ -1,5 +1,4 @@
-/* GRID INTRO  */
-.grid-intro {
+.grid-cards {
   width: min(100%, 36em);
   grid-template-columns: repeat(6, 1fr);
   grid-template-areas:

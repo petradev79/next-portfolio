@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from '../../styles/Projects.module.css';
-import card from '../../assets/1_fopzpyNMN9GPvAIKdsZdaA.png';
+import card from '../../assets/code-1.png';
 import { ProjectInterface } from '../../types';
 import Card from './Card';
 
@@ -30,7 +30,7 @@ const Projects: React.FC<{ projects: ProjectInterface[] }> = ({ projects }) => {
       </div>
       <div className={styles['projects-container']}>
         <div className='flex-center'>
-          {projects.map(project => (
+          {projects.map((project) => (
             <Card key={project._id} project={project} />
           ))}
         </div>

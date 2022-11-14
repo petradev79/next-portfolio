@@ -1,6 +1,6 @@
 import styles from '../styles/Title.module.css';
 import Title from '../components/Title';
-import GridIntro from '../components/GridIntro';
+import Cards from '../components/Cards';
 import Tips from '../components/Tips';
 
 const Home = () => {
@@ -30,7 +30,7 @@ const Home = () => {
               </p>
             </>
           </Title>
-          <GridIntro />
+          <Cards />
         </div>
       </section>
       <Tips />

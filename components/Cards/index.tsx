@@ -4,11 +4,11 @@ import {
   FaHatWizard,
   FaGraduationCap,
 } from 'react-icons/fa';
-import styles from '../../styles/GridIntro.module.css';
+import styles from '../../styles/Cards.module.css';
 
 const Cards = () => {
   return (
-    <div className={styles['grid-intro']}>
+    <div className={styles['grid-cards']}>
       <div className={styles['flex-card']}>
         <h4>
           <FaCode />
