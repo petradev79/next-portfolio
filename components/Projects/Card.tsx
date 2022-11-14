@@ -1,31 +1,25 @@
-// import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { useState } from 'react';
 import { BiGitBranch, BiLink } from 'react-icons/bi';
-import { BsArrowDownRight, BsArrowRight } from 'react-icons/bs';
-import { MdOutlineReadMore } from 'react-icons/md';
+import { BsArrowRight } from 'react-icons/bs';
 
 import { urlFor } from '../../sanity';
 import { ProjectInterface } from '../../types';
 import styles from '../../styles/Projects.module.css';
 
 const Card: React.FC<{ project: ProjectInterface }> = ({ project }) => {
-  // const router = useRouter();
   const [postHovered, setPostHovered] = useState(false);
 
   return (
     <div
       onMouseEnter={() => setPostHovered(true)}
       onMouseLeave={() => setPostHovered(false)}
-      // href={`project/${project.slug.current}`}
-      // onClick={() => router.push(`/project/${project.slug.current}`)}
       className={styles.project}
     >
-      <div className={styles['project-layer']}></div>
       {project.image && (
         <img
           className={styles['project-img']}
-          src={urlFor(project.image).width(300).url()}
+          src={urlFor(project.image).width(280).url()}
           alt='Project'
         />
       )}

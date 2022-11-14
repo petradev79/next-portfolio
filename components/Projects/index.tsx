@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from '../../styles/Projects.module.css';
-import sectionImg from '../../assets/code-1.png';
+import sectionImg from '../../assets/Shopping_merchandise_header.jpeg';
 import { ProjectInterface } from '../../types';
 import Card from './Card';
 
