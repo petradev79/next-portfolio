@@ -10,7 +10,7 @@
 .details-wrapper {
   margin-bottom: 5rem;
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .details h3 {
@@ -33,40 +33,34 @@
 }
 
 .details h3 span {
-  color: rgb(var(--color-accent));
+  color: rgba(var(--color-accent));
 }
 
-.details-tags {
+.grid-tags {
   flex: 1;
 }
 
 .details-tag {
+  padding: 1.5em;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgb(var(--color-dark-two));
+  border-radius: 1em;
+  box-shadow: 0 0.25em 1em rgba(var(--color-black), 0.35);
+}
 
-  margin-bottom: 1rem;
-  font-size: 0.7rem;
-  color: rgba(var(--color-white), 0.85);
-  background: rgba(var(--color-black), 0.1);
-  border-radius: 0.5rem;
-  overflow: hidden;
+.flex-tag {
+  align-items: center;
+  --flex-gap-space: 1rem;
 }
 
 .details-tag img {
   border-radius: 0.5rem;
 }
 
-.details-tag a {
-  width: 40px;
-  height: 40px;
-  font-size: 1.1rem;
-  color: rgba(var(--color-white), 0.85);
-  background: rgba(var(--color-black), 0.1);
-  display: grid;
-  place-content: center;
-  transition: all 0.3s ease-in-out;
+.details-tag p {
+  font-size: 0.9rem;
 }
 
 .details-tag:hover {

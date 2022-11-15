@@ -62,7 +62,7 @@ const Card: React.FC<{ project: ProjectInterface }> = ({ project }) => {
           <div>
             <Link
               href={`details/${project.slug.current}`}
-              className={styles['project-link--more']}
+              className='btn btn--overlay-left color-white'
             >
               View more
               <BsArrowRight />
