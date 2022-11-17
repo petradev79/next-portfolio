@@ -3,8 +3,7 @@ import { client, urlFor } from '../../sanity';
 import { ProjectInterface } from '../../types';
 import Meta from '../../components/Meta';
 import style from '../../styles/Details.module.css';
-import MasonryLayout from '../../components/MasonryLayout';
-import { type } from 'os';
+import ImageCarousel from '../../components/Carousel';
 
 export const getServerSideProps = async (pageContext: any) => {
   const pageSlug = pageContext.query.slug;
@@ -76,11 +75,13 @@ const Details: React.FC<{ project: ProjectInterface }> = ({ project }) => {
             <img
               src={urlFor(project.imageSection).width(500).url()}
               alt='Project main image'
-              className='section-img'
             />
           </div>
         </div>
         <div className={style['details-container']}>
+          <div className={style['details-wrapper']}>
+            <ImageCarousel items={project.imageGallery} />
+          </div>
           <div className={style['details-wrapper']}>
             <h3>
               <span>Technologies and Tools</span> used in project
@@ -111,16 +112,18 @@ const Details: React.FC<{ project: ProjectInterface }> = ({ project }) => {
             </div>
           </div>
         </div>
-        {project.imageGallery?.length && (
+        {/* {project.imageGallery?.length && (
           <div className={style['details-container']}>
-            <div className={style['details-wrapper']}>
+            <div className={style['gallery-wrapper']}>
               <h3>
                 <span>{project.title}</span> image gallery
               </h3>
+              <div className={style.gallery}>
+                <MasonryLayout items={project.imageGallery} />
+              </div>
             </div>
-            <MasonryLayout items={project.imageGallery} />
           </div>
-        )}
+        )} */}
       </section>
     </>
   );

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import styles from '../styles/Title.module.css';
-import shapes from '../assets/shapes.svg';
+import shapes from '../assets/istockphoto-1202205418-612x612.jpg';
 import Meta from '../components/Meta';
 import Title from '../components/Title';
 

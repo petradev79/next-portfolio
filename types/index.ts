@@ -22,7 +22,7 @@ export interface ProjectInterface {
       _ref: string;
     };
   };
-  imageGallery?: ImageInterface[];
+  imageGallery: ImageInterface[];
   destination: string;
   website: string;
   tags: TagInterface[];

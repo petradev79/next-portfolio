@@ -1,7 +1,14 @@
-import styles from '../styles/Title.module.css';
+import titleStyles from '../styles/Title.module.css';
+import cardsStyles from '../styles/Cards.module.css';
 import Title from '../components/Title';
 import Cards from '../components/Cards';
 import Tips from '../components/Tips';
+import {
+  FaCode,
+  FaCodeBranch,
+  FaHatWizard,
+  FaGraduationCap,
+} from 'react-icons/fa';
 
 const Home = () => {
   return (
@@ -12,7 +19,7 @@ const Home = () => {
             <>
               <h1>
                 design and <span>build</span> beautiful content
-                <div className={styles['clip-path']} id='clipPath'>
+                <div className={titleStyles['clip-path']} id='clipPath'>
                   design and build beautiful content
                 </div>
               </h1>
@@ -30,7 +37,44 @@ const Home = () => {
               </p>
             </>
           </Title>
-          <Cards />
+          <Cards>
+            <div className={cardsStyles['grid-cards']}>
+              <div className={cardsStyles['flex-card']}>
+                <h4>
+                  <FaCode />
+                  Define your vision
+                </h4>
+                <p>
+                  A good start is half the battle, before start coding start
+                  planning.
+                </p>
+              </div>
+              <div className={cardsStyles['flex-card']}>
+                <h4>
+                  <FaCodeBranch />
+                  Teamwork and collaboration
+                </h4>
+                <p>It's no secret that teamwork is good for business.</p>
+              </div>
+              <div className={cardsStyles['flex-card']}>
+                <h4>
+                  <FaHatWizard />
+                  User experience
+                </h4>
+                <p>People ignore design that ignores people.</p>
+              </div>
+              <div className={cardsStyles['flex-card']}>
+                <h4>
+                  <FaGraduationCap />
+                  Improving knowledge
+                </h4>
+                <p>
+                  Being a person always willing to learn new skills and
+                  techniques I enjoy being challenged.
+                </p>
+              </div>
+            </div>
+          </Cards>
         </div>
       </section>
       <Tips />

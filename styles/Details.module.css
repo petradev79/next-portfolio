@@ -4,11 +4,11 @@
 }
 
 .details-container {
-  max-width: calc(60rem + var(--container-padding-inline));
+  max-width: calc(70rem + var(--container-padding-inline));
 }
 
 .details-wrapper {
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
   display: flex;
   gap: 2rem;
 }
@@ -17,7 +17,7 @@
   position: relative;
   margin-bottom: 2rem;
   z-index: 1;
-  flex: 1.25;
+  flex: 1.2;
 }
 
 .details h3::after {
@@ -37,7 +37,7 @@
 }
 
 .grid-tags {
-  flex: 1;
+  flex: 0.8;
 }
 
 .details-tag {
@@ -66,3 +66,16 @@
 .details-tag:hover {
   background: rgba(var(--color-black), 0.15);
 }
+
+/* .gallery-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.gallery-wrapper h3 {
+  flex: 0.8;
+}
+
+.gallery {
+  flex: 1.5;
+} */

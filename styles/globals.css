@@ -68,6 +68,15 @@ ul {
   list-style: none;
 }
 
+.carousel {
+  border-radius: 1em;
+}
+
+.carousel .control-dots .dot {
+  background: rgba(var(--color-dark-two)) !important;
+  transform: scale(1.5);
+}
+
 /* BUTTON  */
 .btn {
   padding: 0.7rem 1.2rem;
@@ -79,7 +88,7 @@ ul {
 }
 
 .btn--full {
-  background: rgba(var(--color-accent), 0.75);
+  background: rgba(var(--color-primary), 0.75);
   transition: all 0.4s;
 }
 
@@ -273,5 +282,3 @@ p {
 .color-warning {
   color: rgba(var(--color-warning));
 }
-
-/********************************/

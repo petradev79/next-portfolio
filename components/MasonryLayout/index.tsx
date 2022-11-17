@@ -1,4 +1,3 @@
-import React from 'react';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import { urlFor } from '../../sanity';
 import { ImageInterface } from '../../types';
