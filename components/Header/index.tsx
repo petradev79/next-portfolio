@@ -37,6 +37,12 @@ const Header = () => {
           >
             Projects
           </Link>
+          <Link
+            className={router.pathname == '/skills' ? styles.active : ''}
+            href='/skills'
+          >
+            Skills
+          </Link>
         </div>
       </div>
     </nav>

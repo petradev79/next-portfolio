@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from '../../styles/Projects.module.css';
-import sectionImg from '../../assets/code-1.png';
+import sectionImg from '../../assets/projects.svg';
 import { ProjectInterface } from '../../types';
 import Card from './Card';
 
@@ -9,7 +9,7 @@ const Projects: React.FC<{ projects: ProjectInterface[] }> = ({ projects }) => {
     <section className={styles['projects']}>
       <div className='section-container'>
         <div className='flex-section'>
-          <Image src={sectionImg} width={500} alt='' className='section-img' />
+          <Image src={sectionImg} width={550} alt='' className='section-img' />
           <div className='section-title'>
             <h2>
               Selection of <span>projects</span> I've worked on

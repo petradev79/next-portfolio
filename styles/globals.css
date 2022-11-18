@@ -137,10 +137,10 @@ ul {
   background-size: cover;
 }
 
-.section-img {
+/* .section-img {
   border-radius: 1em;
   box-shadow: -2em 2em 4em rgba(var(--color-black), 0.35);
-}
+} */
 
 .section-slug {
   margin-bottom: 1rem;
@@ -238,7 +238,7 @@ p {
 
 .flex-section {
   position: relative;
-  margin: 10rem 0 20rem;
+  margin: 8rem 0 16rem;
   align-items: flex-start;
   --flex-gap-space: 3rem;
   z-index: 1;

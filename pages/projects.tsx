@@ -7,7 +7,7 @@ import Meta from '../components/Meta';
 import Projects from '../components/Projects';
 import Title from '../components/Title';
 import Cards from '../components/Cards';
-import { FaGithub, FaGraduationCap } from 'react-icons/fa';
+import { FaGraduationCap } from 'react-icons/fa';
 import { MdPeopleAlt } from 'react-icons/md';
 import { GiDividedSquare } from 'react-icons/gi';
 
@@ -68,15 +68,15 @@ const Work: React.FC<{ projects: ProjectInterface[] }> = ({ projects }) => {
             </>
           </Title>
           <Cards>
-            <div className={cardsStyles['grid-cards']}>
+            <div className={cardsStyles['grid-cards__two']}>
               <div className={cardsStyles['flex-card']}>
                 <h4>
                   <FaGraduationCap />
                   Improving knowledge
                 </h4>
                 <p>
-                  Being a person always willing to learn new skills and
-                  techniques I enjoy being challenged.
+                  Best way to improve your skills is building projects and learn
+                  new skills and techniques.
                 </p>
               </div>
               <div className={cardsStyles['flex-card']}>
@@ -84,23 +84,19 @@ const Work: React.FC<{ projects: ProjectInterface[] }> = ({ projects }) => {
                   <MdPeopleAlt />
                   Join a community
                 </h4>
-                <p>Empowering the world through collective knowledge.</p>
+                <p>
+                  Empowering the world to develop technology through collective
+                  knowledge.
+                </p>
               </div>
               <div className={cardsStyles['flex-card']}>
                 <h4>
                   <GiDividedSquare />
                   Divide and conquer
                 </h4>
-                <p>Don't be intimidated divide project into smaller tasks.</p>
-              </div>
-              <div className={cardsStyles['flex-card']}>
-                <h4>
-                  <FaGithub />
-                  Contribute to GitHub
-                </h4>
                 <p>
-                  After using GitHub by yourself for a while, try to contribute
-                  to someone else's project.
+                  Don't be intimidated by large projects divide project into
+                  smaller tasks.
                 </p>
               </div>
             </div>

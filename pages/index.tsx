@@ -38,7 +38,7 @@ const Home = () => {
             </>
           </Title>
           <Cards>
-            <div className={cardsStyles['grid-cards']}>
+            <div className={cardsStyles['grid-cards__one']}>
               <div className={cardsStyles['flex-card']}>
                 <h4>
                   <FaCode />

@@ -39,7 +39,7 @@ export const getServerSideProps = async (pageContext: any) => {
 const Details: React.FC<{ project: ProjectInterface }> = ({ project }) => {
   return (
     <>
-      <Meta title={'Details | ' + project.slug.current} />
+      <Meta title={'Project details | ' + project.slug.current} />
       <section className={style.details}>
         <div className='section-container'>
           <div className='flex-section'>
