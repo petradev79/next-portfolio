@@ -137,11 +137,6 @@ ul {
   background-size: cover;
 }
 
-/* .section-img {
-  border-radius: 1em;
-  box-shadow: -2em 2em 4em rgba(var(--color-black), 0.35);
-} */
-
 .section-slug {
   margin-bottom: 1rem;
   font-size: 1.35rem;
@@ -266,6 +261,10 @@ p {
   max-width: calc(80rem + var(--container-padding-inline));
 }
 
+.mb-xl {
+  margin-bottom: 5rem;
+}
+
 /* COLORS  */
 .color-white {
   color: rgba(var(--color-white));
@@ -277,8 +276,8 @@ p {
   color: rgba(var(--color-accent));
 }
 .color-success {
-  color: rgba(var(--color-succes));
+  color: rgb(var(--color-success));
 }
 .color-warning {
-  color: rgba(var(--color-warning));
+  color: rgb(var(--color-warning));
 }

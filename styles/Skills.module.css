@@ -1,0 +1,13 @@
+.skills {
+  padding: 8rem 0;
+  background: rgba(var(--color-dark-one));
+}
+
+.skills-container--sm {
+  max-width: calc(60rem + var(--container-padding-inline));
+}
+
+.skills h2,
+.skills-description {
+  text-align: center;
+}

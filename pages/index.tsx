@@ -40,7 +40,7 @@ const Home = () => {
           <Cards>
             <div className={cardsStyles['grid-cards__one']}>
               <div className={cardsStyles['flex-card']}>
-                <h4>
+                <h4 className='color-success'>
                   <FaCode />
                   Define your vision
                 </h4>
@@ -50,21 +50,21 @@ const Home = () => {
                 </p>
               </div>
               <div className={cardsStyles['flex-card']}>
-                <h4>
+                <h4 className='color-warning'>
                   <FaCodeBranch />
                   Teamwork and collaboration
                 </h4>
                 <p>It's no secret that teamwork is good for business.</p>
               </div>
               <div className={cardsStyles['flex-card']}>
-                <h4>
+                <h4 className='color-primary'>
                   <FaHatWizard />
                   User experience
                 </h4>
                 <p>People ignore design that ignores people.</p>
               </div>
               <div className={cardsStyles['flex-card']}>
-                <h4>
+                <h4 className='color-accent'>
                   <FaGraduationCap />
                   Improving knowledge
                 </h4>

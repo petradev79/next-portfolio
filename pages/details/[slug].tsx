@@ -112,18 +112,6 @@ const Details: React.FC<{ project: ProjectInterface }> = ({ project }) => {
             </div>
           </div>
         </div>
-        {/* {project.imageGallery?.length && (
-          <div className={style['details-container']}>
-            <div className={style['gallery-wrapper']}>
-              <h3>
-                <span>{project.title}</span> image gallery
-              </h3>
-              <div className={style.gallery}>
-                <MasonryLayout items={project.imageGallery} />
-              </div>
-            </div>
-          </div>
-        )} */}
       </section>
     </>
   );
