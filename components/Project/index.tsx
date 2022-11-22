@@ -8,7 +8,7 @@ import { urlFor } from '../../sanity';
 import { ProjectInterface } from '../../types';
 import styles from '../../styles/Projects.module.css';
 
-const Card: React.FC<{ project: ProjectInterface }> = ({ project }) => {
+const Project: React.FC<{ project: ProjectInterface }> = ({ project }) => {
   const [postHovered, setPostHovered] = useState(false);
 
   return (
@@ -98,4 +98,4 @@ const Card: React.FC<{ project: ProjectInterface }> = ({ project }) => {
   );
 };
 
-export default Card;
+export default Project;

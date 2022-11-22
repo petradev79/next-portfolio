@@ -1,15 +1,11 @@
 import { client } from '../sanity';
-import { ProjectInterface } from '../types';
+import Image from 'next/image';
 
-import titleStyles from '../styles/Title.module.css';
-import cardsStyles from '../styles/Cards.module.css';
+import styles from '../styles/Projects.module.css';
+import sectionImg from '../assets/projects.svg';
+import { ProjectInterface } from '../types';
 import Meta from '../components/Meta';
-import Projects from '../components/Projects';
-import Title from '../components/Title';
-import Cards from '../components/Cards';
-import { FaGraduationCap } from 'react-icons/fa';
-import { MdPeopleAlt } from 'react-icons/md';
-import { GiDividedSquare } from 'react-icons/gi';
+import Project from '../components/Project';
 
 export const getStaticProps = async () => {
   const query = `*[_type == "project"] {
@@ -42,68 +38,37 @@ const Work: React.FC<{ projects: ProjectInterface[] }> = ({ projects }) => {
   return (
     <>
       <Meta title='Projects' />
-      <section className='banner'>
-        <div className='banner-container flex-between'>
-          <Title>
-            <>
-              <h1>
-                building <span>projects</span> improve skills
-                <div className={titleStyles['clip-path']} id='clipPath'>
-                  building projects improve skills
-                </div>
-              </h1>
+      <section className={styles['projects']}>
+        <div className='section-container'>
+          <div className='flex-section'>
+            <Image
+              src={sectionImg}
+              width={550}
+              alt=''
+              className='section-img'
+            />
+            <div className='section-title'>
+              <h2>
+                Selection of <span>projects</span> I've worked on
+              </h2>
               <p>
-                For developers{' '}
-                <a
-                  href='https://www.frontendmentor.io/challenges'
-                  target='_blank'
-                  key='description'
-                >
-                  coding projects
-                </a>{' '}
-                are like the final boss in a video game. They challenge you to
-                learn vital skills and translate your theoretical knowledge into
-                actual code.
+                There is no end of learning in the IT industry. Some would say
+                that there is no industry that is so dynamic and inviting as
+                software development. As a developer, you probably want to{' '}
+                <span>improve your skills</span> constantly and be the best
+                developer you can possibly be.
               </p>
-            </>
-          </Title>
-          <Cards>
-            <div className={cardsStyles['grid-cards__two']}>
-              <div className={cardsStyles['flex-card']}>
-                <h4>
-                  <FaGraduationCap />
-                  Improving knowledge
-                </h4>
-                <p>
-                  Best way to improve your skills is building projects and learn
-                  new skills and techniques.
-                </p>
-              </div>
-              <div className={cardsStyles['flex-card']}>
-                <h4>
-                  <MdPeopleAlt />
-                  Join a community
-                </h4>
-                <p>
-                  Empowering the world to develop technology through collective
-                  knowledge.
-                </p>
-              </div>
-              <div className={cardsStyles['flex-card']}>
-                <h4>
-                  <GiDividedSquare />
-                  Divide and conquer
-                </h4>
-                <p>
-                  Don't be intimidated by large projects divide project into
-                  smaller tasks.
-                </p>
-              </div>
             </div>
-          </Cards>
+          </div>
+        </div>
+        <div className={styles['projects-container']}>
+          <div className='flex-center'>
+            {projects.map((project) => (
+              <Project key={project._id} project={project} />
+            ))}
+          </div>
         </div>
       </section>
-      <Projects projects={projects} />
     </>
   );
 };
