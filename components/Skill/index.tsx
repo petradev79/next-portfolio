@@ -18,7 +18,7 @@ const Skill: React.FC<{ skill: SkillInterface }> = ({ skill }) => {
           {skill.title}
         </h3>
         <h4>{skill.tool.summary}</h4>
-        {skill.description.map((desc) => (
+        {skill.description?.map((desc) => (
           <p key={desc._key}>
             {desc.children.map((span) => (
               <span className={generateMarks(span.marks)} key={span._key}>
