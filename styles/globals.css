@@ -160,6 +160,16 @@ ul {
   color: rgb(var(--color-white));
 }
 
+.section-title p a {
+  text-decoration: none;
+  color: rgb(var(--color-primary));
+  transition: all 0.2s ease-in-out;
+}
+
+.section-title p a:hover {
+  color: rgb(var(--color-accent));
+}
+
 .section-actions {
   margin-top: 2rem;
   display: flex;
@@ -262,7 +272,7 @@ p {
 }
 
 .mb-xl {
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
 }
 
 /* COLORS  */
@@ -280,4 +290,10 @@ p {
 }
 .color-warning {
   color: rgb(var(--color-warning));
+}
+.strong {
+  font-weight: 700;
+}
+.em {
+  font-style: italic;
 }

@@ -1,17 +1,43 @@
+import { client } from '../sanity';
 import styles from '../styles/Skills.module.css';
 import cardsStyles from '../styles/Cards.module.css';
 import Meta from '../components/Meta';
 import Cards from '../components/Cards';
+import Skill from '../components/Skill';
+import { SkillInterface } from '../types';
 
-const Skills = () => {
+export const getStaticProps = async () => {
+  const query = `*[_type == "skill"] {
+    _id,
+    title,
+    description,
+    image,
+    tool -> {
+      _id,
+      title,
+      image,
+      source,
+      summary
+    }
+  }`;
+  const skills = await client.fetch(query);
+
+  return {
+    props: {
+      skills,
+    },
+  };
+};
+
+const Skills: React.FC<{ skills: SkillInterface[] }> = ({ skills }) => {
   return (
     <>
       <Meta title='Skills' />
-      <section className={styles.skills}>
+      <section className={styles['skills-social']}>
         <div className={styles['skills-container--sm']}>
           <div className='section-title mb-xl'>
             <h2>
-              Social <span>skills</span> and abilities
+              <span>Social skills</span> and abilities
             </h2>
             <p className={styles['skills-description']}>
               What are social skills and why are they important? Social skills
@@ -94,6 +120,26 @@ const Skills = () => {
               </div>
             </div>
           </Cards>
+        </div>
+      </section>
+      <section className={styles['skills-technical']}>
+        <div className={styles['skills-container--sm']}>
+          <div className='section-title mb-xl'>
+            <h2>
+              <span>Technical skills</span> and technologies
+            </h2>
+            <p className={styles['skills-description']}>
+              Besides general tools like <span>Git, Slack, Figma...</span> and
+              skills <span>HTML, CSS</span> and <span>JavaScript</span> for
+              front-end development these are my skills and abilities i have
+              learned so far...
+            </p>
+          </div>
+        </div>
+        <div className='section-container'>
+          {skills.map((skill) => (
+            <Skill key={skill._id} skill={skill} />
+          ))}
         </div>
       </section>
     </>

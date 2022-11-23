@@ -25,7 +25,7 @@ export interface ProjectInterface {
   imageGallery: ImageInterface[];
   destination: string;
   website: string;
-  tags: TagInterface[];
+  tags: ToolInterface[];
 }
 
 export interface ImageInterface {
@@ -35,7 +35,19 @@ export interface ImageInterface {
   _key: string;
 }
 
-interface TagInterface {
+export interface SkillInterface {
+  _id: string;
+  title: string;
+  description: DescriptionInterface[];
+  image: {
+    asset: {
+      _ref: string;
+    };
+  };
+  tool: ToolInterface;
+}
+
+interface ToolInterface {
   _id: string;
   title: string;
   source: string;
@@ -45,4 +57,15 @@ interface TagInterface {
       _ref: string;
     };
   };
+}
+
+interface DescriptionInterface {
+  _key: string;
+  children: [
+    {
+      _key: string;
+      text: string;
+      marks: string[];
+    }
+  ];
 }

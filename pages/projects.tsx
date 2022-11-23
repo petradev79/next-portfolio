@@ -58,6 +58,19 @@ const Work: React.FC<{ projects: ProjectInterface[] }> = ({ projects }) => {
                 <span>improve your skills</span> constantly and be the best
                 developer you can possibly be.
               </p>
+              <p>
+                For developers{' '}
+                <a
+                  href='https://www.frontendmentor.io/challenges'
+                  target='_blank'
+                  key='description'
+                >
+                  coding projects
+                </a>{' '}
+                are like the final boss in a video game. They challenge you to
+                learn vital skills and translate your theoretical knowledge into
+                actual code.
+              </p>
             </div>
           </div>
         </div>
