@@ -50,7 +50,7 @@ const Skills: React.FC<{ skills: SkillInterface[] }> = ({ skills }) => {
             </p>
           </div>
         </div>
-        <div className='section-container'>
+        <div className='section-container shape-layer'>
           <Cards>
             <div className={cardsStyles['grid-cards__skills']}>
               <div className={cardsStyles['flex-card']}>

@@ -249,6 +249,12 @@ p {
   z-index: 1;
 }
 
+.shape-layer {
+  position: relative;
+  z-index: 1;
+}
+
+.shape-layer::before,
 .flex-section::before {
   content: '';
   position: absolute;
