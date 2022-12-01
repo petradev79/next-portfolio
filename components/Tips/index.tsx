@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import styles from '../../styles/Tips.module.css';
 import sectionImg from '../../assets/tips.svg';
-<Image src={sectionImg} width={550} alt='Code in editor' />;
 
 const Tips = () => {
   return (

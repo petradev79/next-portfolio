@@ -276,9 +276,15 @@ p {
 .section-container {
   max-width: calc(80rem + var(--container-padding-inline));
 }
+.small-container {
+  max-width: calc(70rem + var(--container-padding-inline));
+}
 
 .mb-xl {
   margin-bottom: 8rem;
+}
+.mb-md {
+  margin-bottom: 3rem;
 }
 
 /* COLORS  */

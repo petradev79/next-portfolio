@@ -1,0 +1,22 @@
+.personal {
+  padding: 8rem 0;
+  background: rgb(var(--color-dark-two));
+}
+
+.personal-title {
+  margin-bottom: 8rem;
+}
+
+.personal-title h4 {
+  margin-bottom: 1.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.personal p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.personal p span {
+  color: rgb(var(--color-white));
+}
