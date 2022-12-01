@@ -32,7 +32,7 @@ export const getStaticProps = async () => {
 const Skills: React.FC<{ skills: SkillInterface[] }> = ({ skills }) => {
   return (
     <>
-      <Meta title='Skills' />
+      <Meta title='Ivan Petrovic | Skills' />
       <section className={styles['skills-social']}>
         <div className={styles['skills-container--sm']}>
           <div className='section-title mb-xl'>

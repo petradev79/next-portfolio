@@ -37,7 +37,7 @@ const Work: React.FC<{ projects: ProjectInterface[] }> = ({ projects }) => {
 
   return (
     <>
-      <Meta title='Projects' />
+      <Meta title='Ivan Petrovic | Projects' />
       <section className={styles['projects']}>
         <div className='section-container'>
           <div className='flex-section'>
