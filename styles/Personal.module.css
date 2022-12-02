@@ -7,6 +7,25 @@
   margin-bottom: 8rem;
 }
 
+.personal-title h3 {
+  position: relative;
+  margin-bottom: 2rem;
+  flex: 1.25;
+  z-index: 1;
+}
+
+.personal-title h3::after {
+  content: '';
+  position: absolute;
+  left: -10rem;
+  top: -5rem;
+  width: 20rem;
+  height: 20rem;
+  background: url(../assets/dots.svg);
+  background-size: cover;
+  z-index: -1;
+}
+
 .personal-title h4 {
   margin-bottom: 1.5rem;
   font-size: 0.75rem;
